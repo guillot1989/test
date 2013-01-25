@@ -1,0 +1,171 @@
+/*------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 21/01/2013
+@updated : 23/01/2013
+@Description :
+CSS V2 de la page parametres_collection(v2).
+Le fichier html est maintenant dépendant seulement de ce fichier CSS
+Fichier CSS 640px
+------------------------------------------------------------------------------*/
+/* Application d'une nouvelle font pour le CSS */
+@font-face
+{
+	font-family: Abel;
+	src: url('./polices/abel/abel-regular-webfont.ttf'),
+     url('./polices/abel/abel-regular-webfont.eot'),
+     url('./polices/abel/abel-regular-webfont.svg'),
+     url('./polices/abel/abel-regular-webfont.woff'); 
+}
+
+/* Reprise du body du CSS général avec le fond en dégradé */
+body
+{
+	/*background-color:#ededed;
+	background-image: -moz-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: -webkit-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: -o-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: -ms-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%)
+	background-repeat: no-repeat;
+	background-size: 100% 100%;*/
+	background: #cacaca; /* Old browsers */
+	background: -moz-linear-gradient(left,  #cacaca 2%, #ededed 45%, #ededed 50%, #ededed 55%, #cacaca 83%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(2%,#cacaca), color-stop(45%,#ededed), color-stop(50%,#ededed), color-stop(55%,#ededed), color-stop(83%,#cacaca)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* IE10+ */
+	background: linear-gradient(to right,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacaca', endColorstr='#cacaca',GradientType=1 ); /* IE6-9 */
+	width: 100%;
+	font-family: Abel, sans-serif;
+    font-size:28pt;
+    color: #383838;
+}
+
+/* Application d'une puce aux 3 grand menus - Nom collection, Couverture et Collaborative
+La puce collaborative changera en fonction de l'affichage de son sous-menu associé 
+comme sur la page 'menu_left.html' (sous-menu "Personnes") */
+.param
+{
+	border-bottom: 2px solid #515151;
+	height: 90px;
+	background:url(../images_640/picto_puce_close.jpg) no-repeat left #3C3C3C;
+	font-color: white;
+	width: 600px;
+}
+
+/* Suppression des points des listes de la page */
+li
+{
+	list-style: none;
+}
+
+/* Application d'une règle d'affichage sur tous les liens non visités 
+On met tous les textes de lien en majuscule, on supprime le soulignage et on lui applique la couleur blanche */
+a
+{
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px 100px;
+	display: block;
+}
+
+/* Application de la couleur sur les liens visités  */
+a:visited
+{
+	color:white;
+}
+
+/* Div générale (600px) */
+#parameters
+{
+	margin: auto;
+	width: 600px;
+}
+
+/* La classe n'apparait pas par défaut sur le fichier HTML,
+elle est appellée par jQuery pour un bouton ok lors de l'appui sur
+"Nom de collection" */
+.valid_infos
+{
+	width: 90px;
+	height: 90px;
+	background: url(../images_640/picto_ok.jpg);
+	background-repeat: no-repeat;
+	text-transform: inherit;
+	position: absolute;
+	border: 0;
+	margin-left: -4px;
+	cursor:pointer;
+}
+
+/* La classe n'apparait pas par défaut sur le fichier HTML,
+elle est appellée par jQuery pour un textbox lors de l'appui sur
+"Nom de collection" */
+.text_infos
+{
+    background-color:#252424;
+    width:414px;
+    color: white;
+    border: none;
+    margin-left: 90px;
+	margin-top: auto;
+	margin-bottom: auto;
+	height: 86px;
+	padding-left:10px;
+	font-family: Abel, sans-serif;
+    font-size:28px;
+}
+
+/* Largeur du ien pour afficher le sous-menu de collaborative */
+#collaborative
+{
+	width: 400px;
+}
+
+/* ID du bouton switch ON/OFF pour afficher un sous-menu particulier
+de "Collaborative" 
+Sera geré en jQuery par la suite pour l'affichage */
+#flip_1
+{
+	position: absolute;
+	margin-left:400px;
+	margin-top: -88px;
+	height: 92px;
+	width: 200px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 2px solid #515151;
+	color: transparent;
+	background: url(../images_640/bouton_off.png) #3C3C3C no-repeat center;
+}
+
+/* Style de la selectbox si le bouton Collaborative est sur OFF */
+#restreint_access_list
+{
+	text-transform: uppercase;
+	position: absolute;
+	background: #515151;
+	height: 90px;
+	width: 600px;
+	border: none;
+	margin-left: -40px;
+	font-family: Abel, sans-serif;
+    font-size:28px;
+    color: white;
+    padding-left: 90px;
+}
+#restreint_access_list option
+{
+	padding-left: 90px;
+
+}
+
+/* DIV contenant 2 liens lorsque le bouton Collaborative est sur ON */
+#slide_collaborative_menu
+{
+	background: #434242;
+	width: 600px;
+}

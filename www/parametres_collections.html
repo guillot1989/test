@@ -1,0 +1,52 @@
+<!--
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 21/01/2013
+@Description :
+ paramètres des collections - collections personnelles ou collections collaboratives
+-----------------------------------------------------------------------------------------------------
+-->
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+  		<!-- style et scripts-->
+  		
+  		<title>Paramètres des collections</title>
+  		
+  		<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" type="text/css">
+		<link rel="stylesheet" href="css/styles_v2.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/style_parametres_collection.css" type="text/css" media="screen"/>
+		
+		<script type="text/javascript" src="./js/jquery.js"></script>
+		<script type="text/javascript" src="./js/jquery.mobile-1.2.0.min.js"></script>
+		<script type="text/javascript" src="./js/function_params_collection.js"></script>
+		<script type="text/javascript" src="./js/function.js"></script>	
+	</head>
+	<body>
+		<div id="parameters">
+			<nav>
+				<ul id="menu_params">
+					<li class="param" id="collection_name"><a href="#">Nom collection</a></li> <!-- Champ du nom de la collection à modifier -->
+					<li id="description" class="param"><a href="#">Description<input class="valid_infos" id="valid_description" type="submit" value=""/></a></li> <!-- Bouton pour envoyer la modification de la description -->
+					<li id="text_description"><textarea class="area_infos" type="textarea"></textarea></li> <!-- Champ de la description à modifier -->
+					<li class="param" id="cover"><a href="#">Couverture</a></li> <!-- Photo à modifier -->
+					
+					<!-- Début de l'option flip switch pour passer en privée ou public-->
+					<li class="option">
+						<div id="form_params">
+							<form>
+								<label for="flip-1">Flip switch:</label>
+								<select name="flip-1" id="flip-1" data-role="slider">
+									<option value="off">Off</option>
+									<option value="on">On</option>
+								</select> 
+							</form>
+						</div>
+					</li>
+					<!-- Fin de l'option flip switch -->
+				</ul>
+			</nav>
+		</div>
+	</body>
+</html>

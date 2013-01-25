@@ -1,0 +1,57 @@
+/*
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 21/01/2013
+@Description :
+Css du menu_top.html
+-----------------------------------------------------------------------------------------------------
+*/
+
+#menu_button  /*style du bouton menu*/
+
+{
+	background-image: url('../images/picto_button_menu.png');
+	position:absolute;
+	width:52px;
+	height:38px;
+	left:6px;
+	top:3px;
+	z-index:1;
+}
+
+#button_with_notif /*style du bouton avec notifications*/
+
+{
+	background-image: url('../images/picto_button_notification.png');
+	position:absolute;
+	width:52px;
+	height:38px;
+	right:6px;
+	top:3px;
+	display:block; /* ATTENTION AFFICHAGE A GERER DYNAMIQUEMENT EN FONCTION DU NOMBRE DE NOTIFICATION */ 
+}
+#button_without_notif /*style du bouton sans notification */
+
+{
+	background-image: url('../images/picto_button_notification2.png');
+	position:absolute;
+	width:52px;
+	height:38px;
+	right:6px;
+	top:3px; 
+	display:none; /* ATTENTION AFFICHAGE A GERER DYNAMIQUEMENT EN FONCTION DU NOMBRE DE NOTIFICATION */ 
+}
+
+#titre_menu /*style du titre du menu*/
+
+{
+	margin:auto;
+	display:block;
+	color:white;
+ 	position:relative;
+	text-align:center;
+	line-height:44px;
+	vertical-align:middle;
+	top:0px;
+	font-family:"Arial"; /* typo à changer */
+}

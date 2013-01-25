@@ -1,0 +1,144 @@
+<!--
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 21/01/2013
+@Description : 
+Barre de recherche Ã  mettre au-dessus du menu.
+-----------------------------------------------------------------------------------------------------
+-->
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- <link rel="stylesheet"  type="text/css" href="../../css/styles_v2.css"/>-->
+<!-- <link rel="stylesheet"  type="text/css" href="../../css/style_menu_search.css"/>-->
+<link rel="stylesheet" href="../../css/style_resultats_recherche_dynamique.css" type="text/css" media="screen"/>
+<script src="../../js/jquery.js"></script>
+<script type="text/javascript">
+
+
+$(document).ready( function(){
+	
+	$('#search_nav').keyup( function(){
+		$("#dynamic_search_result_container").empty(); // vide la div
+		$("#result_autocompletion").empty(); // vide la div
+		$('#result_autocompletion').css('display', 'block'); // cache la liste autocompletion
+		var value = $('#search_nav').val();
+		if(value.length > 2){
+			$('#result_autocompletion').css('display', 'block');
+			get_list();
+		}		
+	});
+	
+	
+});
+
+function get_list(){
+	$("#dynamic_search_result_container").empty(); // vide la div
+	$("#result_autocompletion").empty(); // vide la div
+	var value = $('#search_nav').val();
+	var picture = new Array();
+	var name = new Array();
+	$.ajax({
+		type: "GET",
+		url: "http://api.jolielist.com/search?query="+value, //flux XML, récupere le resultat de la recherche
+		dataType: "xml",
+		complete : function(data, status) {
+			var products = data.responseXML;  //Contient l'objet XML
+			var e = 0;//Variable pour le parcours des images
+			var n = 0;//Variable pour le parcours des noms
+			var ajoutHtml = '';
+			var ajoutListe = '';
+			var compteur = 0;
+			$(products).find('product').each(function(){   //On cherche tous les produits de la liste correspondant 
+				e = e + 1;
+				compteur = compteur + 1;
+				picture[e]= $(this).find('picture').text(); //contient le lien de l'image
+				//Boucle permettant de créer automatiquement le code HTML à inclure dans la page
+				//Dans le cas ou l'affichage est en 640px, on affiche 3 images par ligne
+				if($(window).width() >= 640){
+					if (compteur == 1 ){
+						ajoutHtml += "<div class='dynamic_search_result_line'><div class='dynamic_search_result_image1'><img src='"+picture[e]+"'/></div>";
+					}
+					else if (compteur == 2 ){
+						ajoutHtml += "<div class='dynamic_search_result_image2'><img src='"+picture[e]+"'/></div>";
+					}
+					else if ( compteur == 3){
+						ajoutHtml += "<div class='dynamic_search_result_image3'><img src='"+picture[e]+"'/></div></div>";
+						compteur = 0;
+					}
+				}
+				//Si l'affichage est entre 320 et 640px, on affiche 2 images par ligne
+				else{
+					if (compteur == 1 ){
+						ajoutHtml += "<div class='dynamic_search_result_line'><div class='dynamic_search_result_image1'><img src='"+picture[e]+"'/></div>";
+					}
+					else{
+						ajoutHtml += "<div class='dynamic_search_result_image2'><img src='"+picture[e]+"'/></div></div>";
+						compteur = 0;
+					}
+				}
+			});
+			if(compteur != 0){
+				ajoutHtml += "</div>";//Si jamais le compteur n'est pas à 0, cela signifie que la dernière ligne n'est pas complète, on ferme alors la div correspondant 
+			}
+			$("#dynamic_search_result_container").append(ajoutHtml);//On insère le code HTML généré dans la div "dynamic_search_result_line"
+			
+			ajoutListe += "<ul>";
+			$(products).find('name').each(function(){   //On cherche tous les produits de la liste correspondant 
+				n = n + 1;
+				name[n] = $(this).text(); //contient le nom du produit
+				ajoutListe += "<li onclick=\"document.getElementById('search_nav').value = this.innerHTML; get_list(); $('#result_autocompletion').css('display', 'none');\">"+name[n]+"</li>";
+			});
+			ajoutListe += "</ul>";
+			$("#result_autocompletion").append(ajoutListe);//On insère le code HTML généré dans la div "dynamic_search_result_line"
+			e = 0;
+			
+			
+			
+			var j = 0;
+			/*$('#resultats_recherche_dynamique_container').find('.dynamic_search_result_line').each(function(i){
+				e = e + 1;
+				$(this).children().slice(0,1).css('background', 'url("'+picture[e]+'")'); // ajout de l'image en background
+				e = e + 1;
+				$(this).children().slice(1,2).css('background', 'url("'+picture[e]+'")');
+				e = e + 1;
+				$(this).children().slice(2,3).css('background', 'url("'+picture[e]+'")');
+			});*/
+		}
+	});
+}
+</script>
+</head>
+<body>
+<style> <!--Style intégré dans le fichier CSS -->
+	#result_autocompletion ul{
+		list-style:none;
+		border:1px solid black;
+		padding:0;
+		width:100%;
+		margin-top:0;
+	}
+	#result_autocompletion li:nth-child(odd) {
+		background-color: white;
+		padding-left:5px;
+	}
+	#result_autocompletion li:nth-child(even) {
+		background-color: #DDD;
+		padding-left:5px;
+	}
+</style>
+<!-- grande div barre de navigation -->
+<div id="contentsearchnav">
+    <div id="design_search_haut"> <!-- design dÃ©gradÃ© partie haute de la barre -->
+        <span id="icon_search"></span> <!-- petit icone loupe -->
+        <span id="icon_clear"></span> <!-- petit icone croix pour effacer texte input-->
+        <input id="search_nav" name="search" type="search" placeholder="Rechercher un produit"> <!-- zone de texte de la recherche -->
+    	<button class="cancel_button" onclick="document.getElementById('search_nav').value = ''; get_list(); $('#result_autocompletion').css('display', 'none');">Annuler</button>
+    </div>
+    <div id="design_search_bas"></div> <!-- design dÃ©gradÃ© partie basse de la barre -->
+	<div id="result_autocompletion"></div> <!-- div contenant l'autocompletion -->
+</div>
+<div id="dynamic_search_result_container">
+</div>
+</body>
+</html>

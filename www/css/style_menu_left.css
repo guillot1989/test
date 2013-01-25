@@ -1,0 +1,76 @@
+/*
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 24/01/2013
+@Description :
+Correspond à la page include\inc\menu_left.html
+----------------------------------------------------------------------------------------------------
+*/
+
+/*-----------------------------------------------------------menu_left.HTML------------------------------------------------------------------------------*/
+
+#left_sidebar_container
+{
+    max-width: 300px;
+    height: 100%;
+    background-color: #515151;
+    position:relative;
+    float:left;
+	left:-300px;
+	z-index:5;
+	display:block;
+}
+
+/*Mise en place des listes*/
+#left_sidebar_container ul li
+{
+    background-color: #3d3c3c;
+    border-bottom: 1px solid #515151;
+    display: block;
+}
+
+/*Mise en page des liens*/
+#left_sidebar_container a
+{
+    color: #edebe8;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    line-height: 45px;
+    padding-left: 55px;
+}
+
+/*Puce*/
+#left_sidebar_container .navigation a.left2
+{ 
+    background: url(../images/picto_puce_close.jpg) left no-repeat; 
+}
+
+/*puce lorsqu'on a ouvert le menu*/
+#left_sidebar_container .navigation .open a.left2
+{
+    background-image: url(../images/picto_puce_open.jpg);
+}
+
+/*Sous menu*/
+#left_sidebar_container .navigation ul.subnavigation
+{
+    display: block;
+}
+
+/*Mise en page du Sous menu*/
+#left_sidebar_container .navigation ul.subnavigation li
+{
+    background-color: #dcdcdc;
+    border-bottom: 1px solid #515151;
+
+}
+/*Mise en page des liens du Sous menu*/
+#left_sidebar_container .navigation ul.subnavigation a.left2
+{
+    font-size: 11pt;
+    color: #555555;
+    text-transform: inherit;
+    font-family: Helvetica,"Arial", sans-serif;
+    background-image: none;
+}

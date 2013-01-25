@@ -1,0 +1,41 @@
+/*********************************************************************
+**********************************************************************
+@copyright : AgencyBlur / QL_appshop
+@date : 22/01/2013
+@Description :
+Style pour pop-up de partage sur les réseaux sociaux
+**********************************************************************
+**********************************************************************/
+
+body 
+{
+	margin:0;
+	padding:0;
+}
+#share_inscription 
+{
+	margin: auto;
+	width: 650px;
+}
+#share_inscription p
+{
+	margin: 0 0 15px 0;
+	padding: 0;
+}
+/*Espace entre les boutons*/
+#share_inscription div
+{
+	margin-bottom: 5px;
+}
+/*Centrer les boutons*/
+#button_share 
+{
+	margin: auto;
+	width: 120px;
+}
+/*Placement du bouton facebook*/
+#button_fb
+{
+	margin-top: -15px;
+	padding-bottom: 15px;
+}

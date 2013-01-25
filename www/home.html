@@ -1,0 +1,55 @@
+<!--
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 21/01/2013
+@Description :
+Fil d'actualités 
+Correspond à la page d'accueil de l'utilisateur connecté
+-----------------------------------------------------------------------------------------------------
+-->
+
+<html>
+	<head>
+		<!-- Fiches CSS -->
+		<link rel="stylesheet" type="text/css" href="css/styles_v2.css">
+		<link href="css/style_home.css" rel="stylesheet" type="text/css">
+		<!-- Fiches javascript -->
+		<script src="./js/jquery.js"></script>
+		<script src="./js/function.js"></script>	
+	</head>
+	
+	<body>
+		<!-- Les pages seront appellées en jQuery -->
+		<div id="interface">
+
+			<!-- Menu gauche, recherche -->
+			<div id="left">
+				<div id="search_left"></div>
+				<div id="menu_left"></div>
+			</div>
+			<!-- Page actuelle -->
+			<div id="center">
+				<div id="header"></div>
+				<div id="actualités"></div>
+			</div>
+			<!-- Menu des notifications -->
+			<div id="right">
+				<div id="menu_right"></div>
+			</div>
+		</div>
+
+		<script>
+		$(function(){
+			// Chargement des différentes pages qui constitueront l'application
+			$('#header').load('include/inc/headerV2.html'); // Header
+			$('#search_left').load('include/inc/menu_search.html'); // barre de recherche
+			$('#menu_left').load('include/inc/menu_left.html'); // Menu gauche
+			$('#menu_right').load('include/inc/menu_right.html'); // Menu des notifications
+			
+			/* Au chargement de la page, on décale la partie de gauche */
+			$("#interface").css({'left':'0px','position':'relative'});
+			
+		});
+		</script>
+	</body>
+</html>

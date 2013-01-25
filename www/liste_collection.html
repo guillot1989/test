@@ -1,0 +1,33 @@
+﻿<!--------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 21/01/2013
+@updated : 23/01/2013
+@Description :
+Ajouter une collection
+------------------------------------------------------------------------------------------------------>
+
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+  		<!-- mon template.css -->
+		<link rel="stylesheet" href="./css/style_liste_collection.css" type="text/css" media="screen">
+		<script type="text/javascript" src="./js/jquery.js"></script>
+		<script type="text/javascript" src="./js/function.js"></script>
+		
+	</head>
+	<!-- Listes collections -->
+	<div id="container_liste_collection">
+		<nav>
+			<ul class="navigation">
+				<li class="add_collection" ><a href="#">Ajouter une collection</a></li>
+				<li class="new_collection"><input type="text" id="input_new_collection" maxlength="40"/><input class="submit_collection" type="submit" value=""/></li>     <!-- corrigé -->
+			</ul>
+		</nav>
+	</div>
+	<script>
+		var id_user=2;
+		var name_user="yanis boubou";
+		showCollections(id_user, name_user);
+	</script>
+</html>

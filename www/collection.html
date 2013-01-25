@@ -1,0 +1,113 @@
+<!--
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 25/01/2013
+@Description : Correspond à la page d'une seule collection.
+C'est donc un flux de produits d'une même collection.
+-----------------------------------------------------------------------------------------------------
+-->
+<!doctype html>
+<html lang="fr">
+    <head>
+      	<meta charset="utf-8">
+      	<title>Collection</title>
+      	<link rel="stylesheet" type="text/css" href="./css/style_collection.css">
+      	<link id="css" rel="stylesheet"  type="text/css" href="./css/styles.css">
+		<script src="./js/jquery.js"></script>
+		<script src="./js/function.js"></script>
+    
+      <script>
+      $('.new_collection').hide();
+        $('.add_collection').click(function(){
+            //alert('test');
+        
+            $('.new_collection').show('fast');
+      </script>
+    </head>
+    <body>
+        <!-- entete collection -->
+        <div id="header_collection">
+            <!-- titre de la collection -->
+            <div id="header_collection_name">
+                <span>MOODY HIPSTER </span>
+            </div>
+            <div id="block_header_collection">
+                <!-- avatar de la collection -->
+                <div id="pict_header_collection"></div>
+                <p id="button_text_header_collection">
+                        <!-- bouton gestion des parametres de la collection -->
+                        <span class="collection_parameter"></span>
+                        <!-- bouton de dons -->
+                        <span class="collection_gift"></span>
+                        <br/> <br/>
+                        Créé par <span class="user_name">Kelly Hampton</span>
+                </p>
+            </div>
+        </div>
+        <div id="global_content">
+                <div id="header_bloc_prod">
+                    <div id="header_bloc_prod_content"> <!-- contenu de l'entete du bloc_produit -->
+                        <a href="#"> <span id="arrow_right"></span></a>
+                        <a href="#"> <span id="arrow_left"> </span></a> 
+                        <p id="text">
+	                        Produit <span class="red_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean diam diam, mattis ut lacinia non.</span> 
+	                        <br /> par <span class="red_text"> Kelly Hampton </span> à 23h00
+                        </p>
+                    </div>
+                </div>
+            
+                <div id="content_bloc_prod">	<!-- contenu du block_produit -->							
+                    <div id="prix_prod">
+                        <div id="prix_prod_content">
+                            <span id="prix_prod_content_text">
+                                <span class="grey">à partir de<br/>
+                                <b>149,99 €</b>
+                                </span>
+                            </span>
+                        </div>
+                        <div id="prix_prod_arrow">
+                            <img src="images/prix_item_arrow.png" width="16" height="16" alt="#" />
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="footer_bloc_prod"> <!-- footer du block_prod -->
+                    <span id="titre_footer">Voir le produit</span>
+                    <span id="arrow_footer_bloc_prod"></span> 
+                </div>
+        </div>
+         <div id="global_content">
+                <div id="header_bloc_prod">
+                    <div id="header_bloc_prod_content"> <!-- contenu de l'ent�te du bloc_produit -->
+                        <a href="gauche"> <span id="arrow_left"></span></a>
+                        <a href="droite"> <span id="arrow_right"></span></a>
+                        <p id="text"> Produit <span class="red_text">Cooooooooooooool stuffs</span> 
+                        <br /> par <span class="red_text"> Kelly Hampton </span> à 23h00  </p>
+                    </div>
+                </div>
+            
+                <div id="content_bloc_prod">	<!-- contenu du block_produit -->							
+                    <div id="prix_prod">
+                        <div id="prix_prod_content">
+                            <span id="prix_prod_content_text">
+                                <span class="grey">à partir de<br/>
+                                <b>149,99 €</b>
+                                </span>
+                            </span>
+                        </div>
+                        <div id="prix_prod_arrow">
+                            <img src="images/prix_item_arrow.png" width="16" height="16" alt="#" />
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="footer_bloc_prod"> <!-- footer du block_prod -->
+                    <span id="titre_footer">Voir le produit</span>
+                    <span id="arrow_footer_bloc_prod"></span> 
+                </div>
+        </div>
+        
+      
+       
+    </body>
+</html>

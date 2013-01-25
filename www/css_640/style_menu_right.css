@@ -1,0 +1,94 @@
+/*-----------------------------------------------------------menu_right.HTML------------------------------------------------------------------------------*/
+
+
+
+body
+{
+
+	
+	widht:100%;
+	
+	background: linear-gradient(to right,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* W3C */
+
+}
+
+
+#right_sidebar_container
+{
+    width:640px; /*g4paris*/
+    background-color: #515151;
+    margin: auto;
+}
+
+
+
+
+#right_sidebar_container ul li
+{
+	background-color: #3d3c3c;
+	border-bottom: 2px solid #515151;
+	display: block;
+}
+
+#right_sidebar_container a
+{
+	color: #edebe8;
+	text-decoration: none;
+	font-size:1.6em;
+	display: block;
+	padding-left: 90px;
+	padding-right: 100px;
+	overflow:hidden;
+}
+
+#right_sidebar_container a p
+{
+	padding: 4px;
+	height: auto;
+	text-align:center; /* centrage horizontal */
+}
+
+#right_sidebar_container a span
+{
+	width:100%; /* largeur zone de texte */
+	vertical-align:middle;
+	display:inline-block;
+	line-height:2.6; /* on rétablit le line-height */
+	text-align:left; /* ... et l'alignement du texte */
+	margin-top:10px;
+}
+
+/*Puce*/
+#right_sidebar_container .navigation a 
+{ 
+    background-image: url(../images/picto_puce_close.jpg), url(../images/bg_notif.png);/*bg_notif.png est répeté pour que la puce aille de haut en bas dans la div*/
+    background-position: right;
+    background-repeat: no-repeat, repeat-y;
+}
+
+/*puce lorsqu'on a ouvert le menu*/
+#right_sidebar_container .navigation .open a 
+{
+    background-image: url(../images/picto_puce_open.jpg); 
+}
+
+/*Sous menu*/
+#right_sidebar_container .navigation ul.subnavigation
+{
+    display: block;
+}
+
+#right_sidebar_container .navigation ul.subnavigation li
+{
+    background-color: #dcdcdc;
+    border-bottom: 2px solid #515151;
+}
+
+#right_sidebar_container.navigation ul.subnavigation sa
+{
+    font-size: 1.6em;
+    color: #555555;
+    text-transform: inherit;
+    font-family: Arial, sans-serif;
+    background-image: none;
+}

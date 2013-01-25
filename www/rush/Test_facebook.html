@@ -1,0 +1,103 @@
+<html>
+<head>
+  <title>Hello World</title>
+  
+  
+  <style>
+  body.connected #login { display: none; }
+  body.connected #logout { display: block; }
+  body.not_connected #login { display: block; }
+      body.not_connected #logout { display: none; }
+</style>
+</head>
+<body>
+  
+<div id="fb-root"></div>
+
+
+ <div id="login">
+   <p><button onClick="loginUser();">Login</button></p>
+ </div>
+ <div id="logout">
+   <p><button  onClick="FB.logout();">Logout</button></p>
+ </div>
+ 
+  <div id="user-info"></div>
+
+
+ <a href="#" onclick="getUserFriends();">Get friends</a><br>
+ <div id="user-friends"></div>
+ 
+ <script>
+ 
+   window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '121543394685563', // App ID
+      channelUrl : '//https://desolate-river-6687.herokuapp.com/ ', // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+
+    FB.Event.subscribe('auth.statusChange', handleStatusChange);
+  };
+
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+  
+   function loginUser() {    
+     FB.login(function(response) { }, {scope:'email'});     
+     }
+  function handleStatusChange(response) {
+      document.body.className = response.authResponse ? 'connected' : 'not_connected';
+      if (response.authResponse) {
+        console.log(response);
+
+        updateUserInfo(response);
+      }
+    }
+   function updateUserInfo(response) {
+     FB.api('/me', function(response) {
+       document.getElementById('user-info').innerHTML = '<img src="https://graph.facebook.com/' + response.id + '/picture"></br>' + response.name;
+     });
+   }
+   
+ function getUserFriends() {
+  
+   FB.api('/me/friends?fields=name,picture', function(response) {
+     console.log('Got friends: ', response);
+
+     if (!response.error) {
+       var markup = '';
+
+       var friends = response.data;
+
+       for (var i=0; i < friends.length ; i++) {
+         var friend = friends[i];
+        markup += '<img src="' + friend.picture.data.url + '"> ' + friend.name + '<br>';
+        
+       }
+
+       document.getElementById('user-friends').innerHTML = markup;
+     }else{alert('response error');}
+   });
+ }
+ </script>
+  
+ 
+
+ 
+ 
+ 
+
+
+</body>
+
+
+</html>

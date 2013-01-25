@@ -1,0 +1,70 @@
+<!--
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 21/01/2013
+@Description :
+ paramètres des collections - collections personnelles ou collections collaboratives
+-----------------------------------------------------------------------------------------------------
+-->
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+  		<!-- style et scripts-->
+  		
+  		<title>Paramètres des collections</title>
+  		
+		<link rel="stylesheet" href="css/style_parametres_collection_v2.css" type="text/css" media="screen"/>
+		<script type="text/javascript" src="./js/jquery.js"></script>
+		<script type="text/javascript" src="./js/function.js"></script>	
+		
+		<script type="text/javascript" src="./js/function_params_collection_v2.js"></script>
+	</head>
+	<body>
+		<div id="parameters">
+			<nav>
+				<ul id="menu_params">
+					<li class="param" id="collection_name"><a href="#">Nom collection</a></li><!-- sera remplacé via jQuery en un input -->
+					<li class="param" id="cover"><a href="resultats_recherche_dynamique.html">Couverture</a></li> <!-- Lorsque l'utilisateur a choisi une photo sur la liste qui lui a été proposée dans les résultats de la recherche dynamique, la photo doit apparaitre à la place de la puce_close -->
+					<li class="param" id="collaborative"><a href="#">Collaborative</a>
+					<!-- Switch ON/OFF -->
+					<input type="button" id="flip_1" name="flip_1" value="off" />
+					</li>
+
+					<!-- div cachée -->
+					<div id="slide_collaborative_menu">
+							<!-- 2 liens pour attribuer des collaborateurs et des administrateurs pour la collection -->
+							<ul id="collaborative_menu_yes">
+								<li><a href="#">Gestion des collaborateurs</a></li>
+								<li><a href="#">Gestion des administrateurs</a></li>
+							</ul>
+							<!-- Selectbox pour définir le niveau de diffusion de la collection -->
+							<ul id="collaborative_menu_no">
+								<li><select class="param" id="restreint_access_list">
+									<option value="public">Public</option>
+									<option value="restraint_public">Public restreint</option>
+									<option value="private">Priv&eacute;</option>
+								</select></li>
+							</ul>
+						</div>
+					<!-- Début de l'option flip switch pour passer en privée ou public
+					----------------------------------------------------
+						<li class="option">
+							<div id="form_params">
+								<form>
+									<label for="flip-1">Collection collaborative :</label>
+									<select name="flip-1" id="flip-1" data-role="slider">
+										<option value="off">Non</option>
+										<option value="on">Oui</option>
+									</select> 
+								</form>
+							</div>
+						</li>
+					-->
+					
+					<!-- Fin de l'option flip switch -->
+				</ul>
+			</nav>
+		</div>
+	</body>
+</html>

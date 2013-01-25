@@ -1,0 +1,77 @@
+<!--
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 23/01/2013
+@updated : 25/01/2013
+@Description :
+page de connexion
+-----------------------------------------------------------------------------------------------------
+-->
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" style="text/css" href="./css/style_Connexion.css"/>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/function.js"></script>
+    <!-- fonction de retour en haut de page -->
+    <script type="text/javascript">
+    function switchDisplay()
+    {
+        divInfo = document.getElementById('connection_form');
+        if (divInfo.style.display == 'none')
+            divInfo.style.display = 'block';
+        else
+            divInfo.style.display = 'none';
+    }
+    </script>
+    <!-- fin de fonction de retour en haut de page -->
+
+    <title>Connexion</title>
+</head>
+
+<body>
+    <div id="connection_container">
+        <div id="left">
+            <div id="search_left">
+            </div>
+        </div>
+        <div id="menu_right">
+        </div>
+        <div id="menu_left">
+        </div>
+        <div id="connection_content">
+            <div id="connection_button_content">
+
+                <!-- SE CONNECTER AVEC FACEBOOK -->
+                <a href="#"><img src="./images/facebook.jpg" class="connection_button"></a> <!-- background et texte à réaliser pour remplacer image, ne garder que le petit logo de gauche-->
+                <!-- FIN SE CONNECTER AVEC FACEBOOK -->
+
+                <!-- SE CONNECTER AVEC TWITTER -->
+                <a href="#"><img src="./images/twitter.jpg"  class="connection_button"></a><!-- background et texte à réaliser pour remplacer image, ne garder que le petit logo de gauche-->
+                <!-- FIN SE CONNECTER AVEC TWITTER -->
+
+                <!-- SE CONNECTER AVEC JOLIELIST -->
+                <a href="javascript: switchDisplay();"><img src="./images/jolielist.jpg" class="connection_button"></a><!-- background et texte à réaliser pour remplacer image, ne garder que le petit logo de gauche-->
+
+                <div id="connection_form" style="display: none;"> <!-- Obligation de mettre le style dans la balise -->
+                    <form><!--Formulaire de connexion-->
+                        <input type="email" id="email" name="email" placeholder="Email"><br>
+
+                        <input type="password" name="password" id="password" placeholder="Mot de passe"><br>
+
+                        <button type="submit" role="button" aria-disabled="false">
+                         Connexion
+                     </button>
+                 </form><!--Fin du formulaire de connexion-->
+
+                 <div id="connection_button_inscription"> <!--Bouton inscription-->
+                    <a href="#" id="lol">Inscription</a>
+                </div>
+            </div>
+            <!-- FIN SE CONNECTER AVEC JOLIELIST -->
+        </div>
+    </div>
+</div>
+</body>
+</html>

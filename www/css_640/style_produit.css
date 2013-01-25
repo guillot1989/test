@@ -1,0 +1,290 @@
+/***
+*************************************************************************
+@copyright : AgencyBlur / QL_appshop
+@date : 23/01/2013
+@updated : 25/01/2013
+@Description : Style de la page PROFIL avec redimensionnement à 320px
+*************************************************************************
+***/
+
+body
+{
+	margin: 0;
+	padding: 0;
+	/*background-color:#ededed;
+	background-image: -moz-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: -webkit-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: -o-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: -ms-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%)
+	background-repeat: no-repeat;
+	background-size: 100% 100%;*/
+	background: #cacaca; /* Old browsers */
+	background: -moz-linear-gradient(left,  #cacaca 2%, #ededed 45%, #ededed 50%, #ededed 55%, #cacaca 83%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(2%,#cacaca), color-stop(45%,#ededed), color-stop(50%,#ededed), color-stop(55%,#ededed), color-stop(83%,#cacaca)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* IE10+ */
+	background: linear-gradient(to right,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacaca', endColorstr='#cacaca',GradientType=1 ); /* IE6-9 */
+}
+
+@font-face
+{
+	font-family: Abel;
+	src: url('polices/abel/abel-regular-webfont.ttf'),
+     url('polices/abel/abel-regular-webfont.eot'),
+     url('polices/abel/abel-regular-webfont.svg'),
+     url('polices/abel/abel-regular-webfont.woff'); 
+}
+
+/*****************reset**********************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td
+ {
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    vertical-align: baseline;
+}
+
+span{
+	color:#b71012;
+	
+}
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a:link, a:visited, a:visited,a:hover,a:active   {text-decoration:none;}
+
+/*==============================================================================
+CONTAINER
+==============================================================================*/
+
+#produit_container {
+	width: 600px;
+	margin: 0 auto;
+	font-size: 28px;
+
+}
+
+
+/*****************TITRES**********************/
+
+h1#produit_name {
+	width:600px;
+        position: relative;
+	margin:0px auto;
+	margin-top: 28px;
+	margin-bottom: 14px;
+	font-weight:bold;
+        font-family: Abel, sans-serif;
+	font-size:62px;
+	text-transform: uppercase;
+}
+
+
+#produit_content{
+	margin-top:36px;
+	background-color: #f4f4f4;
+	width: 600px;
+	height:320px;
+	border-bottom-left-radius:8px;
+	border-bottom-right-radius:8px;
+	
+}
+#produit_btn_partager{
+	float:left;
+	margin-left: 14px;
+	margin-top:20px;
+	height:42px;
+	width:138px;
+    background: #be0c0e; /* Old browsers */
+	background: -moz-linear-gradient(top,  #be0c0e 0%, #9a090a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#be0c0e), color-stop(100%,#9a090a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #be0c0e 0%,#9a090a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#be0c0e', endColorstr='#9a090a',GradientType=0 ); /* IE6-9 */
+	color:#e3c3c3;
+    font-weight:bold;
+    font-family: Abel, sans-serif;
+    text-align:center;
+    font-size:22px;
+}
+#produit_btn_partager p {
+	margin-top:6px;
+}
+#produit_btn_partager_valeur{
+	font-size:22px;
+	float:left;
+	height:42px;
+	width:64px;
+	font-weight:bold;
+    font-family: Abel, sans-serif;
+    text-align:center;
+	margin-top:20px;
+    background: #edeae6; /* Old browsers */
+background: -moz-linear-gradient(top,  #edeae6 0%, #d6d1cc 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#edeae6), color-stop(100%,#d6d1cc)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #edeae6 0%,#d6d1cc 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #edeae6 0%,#d6d1cc 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #edeae6 0%,#d6d1cc 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #edeae6 0%,#d6d1cc 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edeae6', endColorstr='#d6d1cc',GradientType=0 ); /* IE6-9 */
+    color:#be4242;
+	font-size:22px;
+}
+#produit_btn_partager_valeur p {
+	margin-top:6px;
+}
+
+#produit_btn_favoris{
+	float:left;
+	height:42px;
+	width:78px;
+	margin-top:20px;
+	margin-left:18px;
+	background: #be0c0e; /* Old browsers */
+	background: -moz-linear-gradient(top,  #be0c0e 0%, #9a090a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#be0c0e), color-stop(100%,#9a090a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #be0c0e 0%,#9a090a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#be0c0e', endColorstr='#9a090a',GradientType=0 ); /* IE6-9 */
+   font-size:22px;
+	
+}
+#produit_btn_favoris img {
+	margin-left:32px;
+	margin-top:12px;
+}
+#produit_prix_bold{
+	color:black;
+	font-weight:bold;
+}
+#produit_btn_ajouter_collection{
+	float:left;
+	margin-left: 14px;
+	margin-top:20px;
+	height:42px;
+	width:256px;
+    background: #be0c0e; /* Old browsers */
+	background: -moz-linear-gradient(top,  #be0c0e 0%, #9a090a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#be0c0e), color-stop(100%,#9a090a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #be0c0e 0%,#9a090a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#be0c0e', endColorstr='#9a090a',GradientType=0 ); /* IE6-9 */
+	color:#e3c3c3;
+    font-weight:bold;
+    font-family: Abel, sans-serif;
+    text-align:center;
+    font-size:22px;
+}
+#produit_btn_ajouter_collection p {
+	margin-top:6px;
+}
+#produit_content_text {
+	clear: both;
+	width:562px;
+	margin-top: 100px;
+	margin-left:14px;
+	font-family: Abel, sans-serif;
+    font-size:24px;
+    font-style:italic;
+    position: absolute;
+}
+#produit_btn_vendeurs{
+	margin-top:10px;
+	width:600px;
+	height:72px;
+	background: #be0c0e; /* Old browsers */
+	background: -moz-linear-gradient(top,  #be0c0e 0%, #9a090a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#be0c0e), color-stop(100%,#9a090a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #be0c0e 0%,#9a090a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#be0c0e', endColorstr='#9a090a',GradientType=0 ); /* IE6-9 */
+	color:#e3c3c3;
+    font-weight:bold;
+    font-family: Abel, sans-serif;
+    font-size:28px;
+	
+}
+
+#produit_btn_vendeurs p {
+	margin-top:16px;
+	margin-left:24px;
+	float:left;
+}
+#produit_btn_commentaires p {
+	float:left;
+	margin-top:16px;
+	margin-left:24px;
+}
+.produit_arrow {
+	margin-right:24px;
+	float:right;
+	margin-top:16px;
+	
+}
+#produit_btn_commentaires{
+	margin-top:4px;
+	width:600px;
+	height:72px;
+	background: #be0c0e; /* Old browsers */
+	background: -moz-linear-gradient(top,  #be0c0e 0%, #9a090a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#be0c0e), color-stop(100%,#9a090a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #be0c0e 0%,#9a090a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#be0c0e', endColorstr='#9a090a',GradientType=0 ); /* IE6-9 */
+	color:#e3c3c3;
+    font-weight:bold;
+    font-family: Abel, sans-serif;
+    font-size:28px;
+	
+}
+/*==============================================================================
+CONTENT des produits
+==============================================================================*/
+
+#global_content
+{
+	margin:0px auto;
+    position: relative;
+    width:600px;
+}
+
+
+/*****************Début content_bloc_prod de la collection**********************/
+#content_bloc_prod
+{
+	clear:both;
+	width: 600px;
+	height: 400px;
+	background-image: url(../images/image_collection.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+

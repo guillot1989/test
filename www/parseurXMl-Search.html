@@ -1,0 +1,56 @@
+<!-- 
+---------------------------------------------------
+parser de flux XML search tester sur un terminal mobile
+---------------------------------------------------
+ -->
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Parser du XML avec jQuery</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(  function(){
+
+    
+
+        $.ajax({
+            type: "GET",
+            url: "http://lyon4.steven-titren.com/search?query=verre",
+            dataType: "xml",
+            complete : function(data, status) {
+                var products = data.responseXML;
+                var appendHtml = "";
+                $(products).find('product').each(function(){
+                    var id = $(this).attr('id');
+                    var titre = $(this).find('name').text();
+					var description = $(this).find('description').text();
+					var price = $(this).find('price').text();
+					var rank = $(this).find('rank').text();
+					var favorite_rank = $(this).find('favorite_rank').text();
+					var shared_count = $(this).find('shared_count').text();
+					var favorite_count = $(this).find('favorite_count').text();
+					var shared = $(this).find('shared').text();
+					var url= $(this).find('url').text();
+					var score= $(this).find('score').text();
+					var picture= $(this).find('picture').text();
+                    var redirect_url = $(this).find('redirect_url').text();
+                   
+                    
+                    appendHtml += " <img src="+picture+" width='50px' height='50px'><strong>titre: "+titre+"</strong><br> description:"+description+"<br> price:"+price+" <br> rank:"+rank+" <br> favorite_rank: "+favorite_rank+" <br> shared_count:"+shared_count+" <br> favorite_count: "+favorite_count+" <br> shared: "+shared+" <br> url="+url+"  </li><br><br><br>  ";
+                });
+                $("#produit").append(appendHtml);
+            }});    
+
+}
+                 );   
+</script>
+</head>
+<body>
+    <div id="container">
+        
+        <ul id="produit" />
+    </div>
+</body>
+</html>

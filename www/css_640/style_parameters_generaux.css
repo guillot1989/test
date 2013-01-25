@@ -1,0 +1,76 @@
+/*
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 24/01/2013
+@Description :
+paramètres généraux
+----------------------------------------------------------------------------------------------------
+*/
+
+/*****************reset**********************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td
+{
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0px;
+    padding: 0px;
+    outline: 0;
+    vertical-align: baseline;
+}
+
+body
+{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacaca', endColorstr='#cacaca',GradientType=1 ); /* IE6-9 */
+	width: 100%;
+	background-color: #3d3c3c;
+}
+
+/*PARAMETRE SIDE BARRE CONTENEUR*/
+#parameter_sidebar_container
+{
+    width: 640px;
+    height: 100%;
+    background-color: #515151;
+    position:relative;
+    z-index:5;
+    display:block;
+    margin: auto;
+}
+
+
+#parameter_sidebar_container ul li
+{
+    background-color: #3d3c3c;
+    border-bottom: 1px solid #515151;
+    display: block;
+}
+
+#parameter_sidebar_container a
+{
+    color: #edebe8;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    line-height: 45px;
+    padding-left: 55px;
+}
+
+/*Puce*/
+#parameter_sidebar_container .navigation a 
+{ 
+        background: url(images/images_menu/cross_parameter.jpg) left no-repeat; 
+}
+
+#parameter_sidebar_container .navigation {
+    margin: 0px;
+    padding: 0px;
+}

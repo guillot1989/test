@@ -1,0 +1,32 @@
+/*------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 23/01/2013
+@Description :
+Page buttonsCollectionsFavourites.html
+CSS 640px 
+------------------------------------------------------------------------------*/
+
+#button_collections
+{
+	background-color:#ffffff;
+	border:none;
+	color:#000000;
+	height:42px;
+	/*font-family:à préciser;*/
+	font-size:16px;
+	font-style:italic;
+	text-align:left;
+	text-decoration:none;
+	width:134px;
+}
+
+#button_favoris
+{
+	background-image:url(images/bt_favoris.jpg);
+	border:none;
+	height:42px;
+	font-size:14px;
+	text-align:right;
+	text-decoration:none;
+	width:134px;
+}

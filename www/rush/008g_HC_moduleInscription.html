@@ -1,0 +1,47 @@
+<!--
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 22/01/2013
+@Description :
+Pop-up de partage après inscription
+-----------------------------------------------------------------------------------------------------
+-->
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Partage</title>
+  <link rel="stylesheet" type="text/css" href="./css/style_008g_HC.css">
+  
+  <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+  <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js">{lang: 'fr'}</script>
+  
+</head>
+<body>
+	<div id="share_inscription">
+		<p>
+			Bienvenue sur Jolie List ! Vous &egrave;tes maintenant des n&ocirc;tres ! Voulez-vous partager cette nouvelle ?
+		</p>
+		<div id="button_share">
+			<!-- Partage Twitter: Mettre l'adresse du lien à partager dans l'attribut data-url -->
+			<div>
+				<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://your-url" data-text="{Texte de présentation}" data-count="horizontal" data-lang="fr">Tweeter</a>
+			</div>
+			<!-- Partage Google+: Mettre l'adresse du lien à partager dans l'attribut href  -->
+			<div>
+				<g:plusone href="http://your-url"></g:plusone>
+			</div>
+			<!-- Partage Facebook: Mettre l'adresse du lien à partager dans l'attribut share_url / Application d'un style particulier car problème de placement -->
+			<div id="button_fb">
+				<a href="http://www.facebook.com/sharer.php" name="fb_share" class="fb_share" type="icon_link" share_url="http://your-url">Facebook</a>
+			</div>
+			<!-- PNe pas partager: Ferme la pop-up -->
+			<div>
+				<a href="#">Ne pas partager</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,509 @@
+/*------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 21/01/2013
+@updated : 23/01/2013
+@Description :
+Page actualites.html
+CSS 320px 
+------------------------------------------------------------------------------*/
+@font-face
+{
+	font-family: Abel;
+	src: url('polices/abel/abel-regular-webfont.ttf'),
+    url('polices/abel/abel-regular-webfont.eot'),
+    url('polices/abel/abel-regular-webfont.svg'),
+    url('polices/abel/abel-regular-webfont.woff'); 
+}
+
+/*****************reset**********************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td
+{
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0px;
+    padding: 0px;
+    outline: 0;
+    vertical-align: baseline;
+}
+
+body
+{
+/*background-color:#ededed;
+background-image: -moz-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+background-image: -webkit-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+background-image: -o-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+background-image: -ms-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+background-image: radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%)
+background-repeat: no-repeat;
+background-size: 100% 100%;*/
+background: #cacaca; /* Old browsers */
+background: -moz-linear-gradient(left,  #cacaca 2%, #ededed 45%, #ededed 50%, #ededed 55%, #cacaca 83%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(2%,#cacaca), color-stop(45%,#ededed), color-stop(50%,#ededed), color-stop(55%,#ededed), color-stop(83%,#cacaca)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* IE10+ */
+background: linear-gradient(to right,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacaca', endColorstr='#cacaca',GradientType=1 ); /* IE6-9 */
+width: 100%;
+}
+
+
+#global_content
+{
+    margin:auto;
+    position: relative;
+    width:300px;
+}
+
+/*==============================================================================
+---------------------------------menu_reseau--------------------------------
+==============================================================================*/
+
+.menu_network
+{
+    width:100%;
+    min-height:35px;
+    position: relative;
+    margin-top: 18px;
+}
+
+#jolielist
+{
+    display: block;
+    background: url(../images/jolielist.png);
+    background-repeat:no-repeat;
+    height: 30px;
+    width: 117px;
+    float: left;
+    margin-left: 3px;
+}
+#fb
+{
+    display: block;
+    background: url(../images/fb.png) no-repeat;
+    height: 30px;
+    width: 30px;
+    float: right;
+}
+#flux
+{
+    display: block;
+    background: url(../images/flux.png) no-repeat;
+    height: 30px;
+    width: 30px;
+    float: right;
+}
+#twitter{
+    display: block;
+    background: url(../images/twitter.png) no-repeat;
+    height: 30px;
+    width: 30px;
+    float: right;
+    margin-right: 6px;
+}
+
+/*****************Fin menu_reseau**********************/
+
+/*==============================================================================
+---------------------------------voir le produit--------------------------------
+==============================================================================*/
+
+/*****************Début header_bloc_prod**********************/
+
+#header_bloc_prod
+{
+	margin-top: 18px;
+}
+
+#header_bloc_prod_content
+{
+	background-color: #f4f4f4;
+	height: 45px;
+	border-radius: 6px 6px 0px 0px;
+	border-bottom-style:solid;
+	border-bottom-color: #c7c7c7;
+	border-bottom-width: 1px;
+}
+
+#header_bloc_prod_content #text
+{
+  
+	text-align:left;
+	position: absolute;
+	margin-left: 3%;
+	line-height: 16px;
+	margin-top:10px;
+	font-size: 14px;
+	font-weight:bold;
+	font-family: Abel, sans-serif;
+	color:#383838;
+}
+#header_bloc_prod_content .red_text
+{
+	color:#b71012;
+}
+
+#header_bloc_prod_content #arrow_left
+{
+    background:url(../images/arrow_left.png);
+	height:16px ;
+	width: 9px;
+	position: absolute;
+	right: 27px;
+	margin-top:18px;
+}
+
+#header_bloc_prod_content #arrow_right
+{
+	background:url(../images/arrow_right.png);
+	height:16px ;
+	width: 9px;
+	position: absolute;
+	right: 6px;
+	margin-top:18px;
+}
+
+/*****************Fin du header du bloc_prod**********************/
+
+
+/*****************Début content_bloc_prod de la collection**********************/
+#content_bloc_prod
+{
+	height: 210px;
+	background-image: url(../images/image_collection.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#prod_price
+{
+	width:135px;
+	height:44px;
+	background-color:rgba(155,155,155,0.7);
+	border-radius:3px;
+	padding:5px;
+	float:right;
+	margin-right:20px;
+    margin-top:130px;
+}
+
+#prod_price_content
+{
+	width:90px;
+	height:44px;
+	background-color:#f4f4f4;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+	float:left;
+	opacity:1.0;
+	position:relative;
+}
+
+
+#prod_price_content_text
+{
+	float:left;
+	margin-left:15px;
+	margin-top:6px;
+	text-align:center;
+	font-family: Arial;
+	font-size:9pt;
+}
+
+#prod_price_content_text .grey
+{
+	text-align:center;
+	color:#858585;
+}
+
+#prod_price_content_text b
+{
+	color:black;
+}
+
+#prod_price_arrow
+{
+	width:16px;
+	height:16px;
+	background-color:#f4f4f4;
+	float:left;
+	margin-left:1px;
+	padding:14px;
+}
+
+/*****************Début du footer du bloc_prod**********************/
+
+#footer_bloc_prod
+{
+	background: rgb(190,12,14); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(190,12,14,1) 0%, rgba(154,9,10,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(190,12,14,1)), color-stop(100%,rgba(154,9,10,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#be0c0e', endColorstr='#9a090a',GradientType=0 ); /* IE6-9 */
+	height:45px;
+	position:relative;
+}
+
+#footer_title 
+{
+    color:#e3c3c3;
+	position: absolute;
+    margin-left: 110px;
+    top:13px;
+	font-weight:bold;
+	font-family: Abel, sans-serif;
+        
+}
+
+#arrow_footer_bloc_prod
+{
+	background-image: url('../images/picto_arrow_droite.png');
+	position:absolute;
+	right:20px;
+    top: 13px;
+	width:9px;
+	height:16px;
+}
+
+
+/*==============================================================================
+---------------------------------voir la collection-----------------------------
+==============================================================================*/
+
+#global_content_collection
+{
+    margin:auto;
+    position: relative;
+    width:300px;
+}
+
+/*****************header**********************/
+
+.content
+{
+	margin-top: 18px;
+}
+
+.headeritem
+{
+    background-color: #f4f4f4;
+	height: 45px;
+	border-radius: 6px 6px 0px 0px;
+	border-bottom-style:solid;
+	border-bottom-color: #c7c7c7;
+	border-bottom-width: 1px;
+}
+
+.text
+{
+	text-align:left;
+	position: absolute;
+	margin-left: 3%;
+	line-height: 16px;
+	margin-top:10px;
+	font-size: 14px;
+	font-weight:bold;
+	font-family: Abel, sans-serif;
+	color:#383838;
+}
+
+.red_text
+{
+	color:#b71012;
+}
+.arrow_left
+{
+    background:url(../images/arrow_left.png);
+	height:16px ;
+	width: 9px;
+	position: absolute;
+	right: 27px;
+	margin-top:18px;
+}
+
+.arrow_right
+{
+	background:url(../images/arrow_right.png);
+	height:16px ;
+	width: 9px;
+	position: absolute;
+	right: 6px;
+	margin-top:18px;
+}
+
+/*****************content collection**********************/
+.content_item
+{
+    height:210px;
+    background-color: blue;
+}
+/* ++++++++++++++++++++++ Cas 1 : grande photo à gauche +++++++++++++++++ */
+#picture1
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 150px;
+    height: 210px;
+    float: left;
+    background-position: center;
+}
+
+#picture2
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 150px;
+    height: 105px;
+    float: right;
+    background-position: center;
+}
+
+#picture3
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 150px;
+    height: 105px;
+    float: right;
+    background-position: center;
+}
+
+/* ++++++++++++++++++++++ Cas 2 : grande photo en haut +++++++++++++++++ */
+/*#picture1
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 300px;
+    height: 105px;
+    float: left;
+    background-position: center;
+}
+
+#picture2
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 150px;
+    height: 105px;
+    float: left;
+    background-position: center;
+}
+
+#picture3
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 150px;
+    height: 105px;
+    float: right;
+    background-position: center;
+}*/
+
+/* ++++++++++++++++++++++ Cas 3 : grande photo à droite +++++++++++++++++ */
+/*#picture1
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 150px;
+    height: 210px;
+    float: right;
+    background-position: center;
+}
+
+#picture2
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 150px;
+    height: 105px;
+    float: left;
+    background-position: center;
+}
+
+#picture3
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 150px;
+    height: 105px;
+    float: right;
+    background-position: center;
+}*/
+
+/* ++++++++++++++++++++++ Cas 4 : grande photo en bas +++++++++++++++++ */
+/*#picture1
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 150px;
+    height: 105px;
+    float: right;
+    background-position: center;
+}
+
+#picture2
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 150px;
+    height: 105px;
+    float: left;
+    background-position: center;
+}
+
+#picture3
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 300px;
+    height: 105px;
+    float: right;
+    background-position: center;
+}*/
+
+/******************footer colletction*********************/
+.see_product
+{
+    background: rgb(190,12,14); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(190,12,14,1) 0%, rgba(154,9,10,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(190,12,14,1)), color-stop(100%,rgba(154,9,10,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#be0c0e', endColorstr='#9a090a',GradientType=0 ); /* IE6-9 */
+    height:45px;
+    position:relative;
+	
+}
+
+.arrow_see_product
+{
+    background-image: url('../images/picto_arrow_droite.png');
+    position:absolute;
+    right:20px;
+    top: 13px;
+    width:9px;
+    height:16px;
+}
+.see_product_title
+{
+    color:#e3c3c3;
+    position: absolute;
+    margin-left: 110px;
+    top:13px;
+    font-weight:bold;
+    font-family: Abel, sans-serif;
+}

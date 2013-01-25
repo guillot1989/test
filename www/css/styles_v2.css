@@ -1,0 +1,477 @@
+/*
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 22/01/2013
+@Description :
+ceci est la feuille de style de base
+----------------------------------------------------------------------------------------------------
+*/
+
+@font-face
+{
+	font-family: Abel;
+	src: url('polices/abel/abel-regular-webfont.ttf'),
+     url('polices/abel/abel-regular-webfont.eot'),
+     url('polices/abel/abel-regular-webfont.svg'),
+     url('polices/abel/abel-regular-webfont.woff'); 
+}
+
+/*****************reset**********************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td
+ {
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    vertical-align: baseline;
+}
+
+/*TEXTE*/
+body
+{
+    font-family: Abel, sans-serif;
+    font-size:14pt;
+    color: #383838;
+    /*position: relative;*/
+}
+
+/*LIEN*/
+a
+{
+	font-size:14pt;
+	font-family: Abel, sans-serif;
+}
+
+/*TITRE*/
+h1
+{
+	font-size:22pt;
+	color: #363636;
+	font-family: Abel, sans-serif;
+}
+
+/*BOUTON*/
+input
+{
+	font-size:14pt;
+	color: #FFFFFF;
+	font-family: Abel, sans-serif;
+}
+
+/*-----------------------------------------------------------liste_collection.HTML------------------------------------------------------------------------------*/
+
+#container_liste_collection ul li
+{
+    background-color: #3d3c3c;
+    border-bottom: 1px solid #515151;
+    display: block;
+
+}
+
+#container_liste_collection{
+	width: 300px;
+	margin: auto;
+}
+
+#container_liste_collection a
+{
+    color: #edebe8;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    line-height: 45px;
+    padding-left: 20px;
+}
+
+/*Puce*/
+#container_liste_collection .navigation a 
+{ 
+    background: url(../images/picto_puce_close.jpg) right no-repeat; 
+}
+
+#container_liste_collection .navigation .open a 
+{
+    background-image: url(../images/picto_puce_open.jpg); 
+}
+
+
+#container_liste_collection .navigation .add_collection, #container_liste_collection .navigation .writing_collection
+{
+    background-color: #dbdbdb;
+}
+
+/*liste des collections*/
+#container_liste_collection .navigation .add_collection a
+{
+    background-image: url(../images/picto_plus.jpg);
+    color: #b71012;
+    font-size: 12pt;
+    text-transform: inherit;
+
+}
+
+#container_liste_collection .navigation li.public_collection 
+{
+    background-color: #434242;
+}
+
+/*lorque'on a cliqué sur "ajouter une colection" (voir psd "liste_collection v01 & v01.2")*/
+
+#container_liste_collection .navigation .writing_collection a
+{
+    color: #4c4c4c;
+    background-image: url(../images/picto_plus_writing.jpg);
+    background-position: right;
+    font-size: 12pt;
+    text-transform: inherit;
+}
+
+/*lorsqu'on nomme une collection*/
+
+#container_liste_collection .navigation li.new_collection 
+{
+    background-repeat: no-repeat;
+    background-color: #252424;
+    font-size: 12pt;
+    text-transform: inherit;
+    height: 45px;
+}
+
+/* à remettre en forme */
+.submit_collection 
+{
+	width: 45px;
+	height: 45px;
+	background: url(../images/picto_ok.jpg);
+	background-repeat: no-repeat;
+	text-transform: inherit;
+	position: absolute;
+	border: 0;	
+}
+
+.submit_collection:hover
+{
+	cursor:pointer;
+}
+.submit_collection:hover
+{
+	cursor: pointer;
+}
+/* ID pour le textbox nom de collection */
+#type_collection
+{
+    background-color:#252424;
+    width: 78.45%;
+    color: #6f6d6b;
+    border: none;
+    margin-left: 20px;
+	margin-top: auto;
+	margin-bottom: auto;
+	height: 43px;
+}
+
+#container_liste_collection .navigation .writing_collection{
+    display : none;
+}
+
+/*-----------------------------------------------------------Collection.HTML------------------------------------------------------------------------------*/
+
+#conteneur_collection
+{
+/*background-color:#ededed;
+background-image: -moz-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+background-image: -webkit-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+background-image: -o-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+background-image: -ms-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+background-image: radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%)
+background-repeat: no-repeat;
+background-size: 100% 100%;*/
+background: #cacaca; /* Old browsers */
+background: -moz-linear-gradient(left,  #cacaca 2%, #ededed 45%, #ededed 50%, #ededed 55%, #cacaca 83%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(2%,#cacaca), color-stop(45%,#ededed), color-stop(50%,#ededed), color-stop(55%,#ededed), color-stop(83%,#cacaca)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* IE10+ */
+background: linear-gradient(to right,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacaca', endColorstr='#cacaca',GradientType=1 ); /* IE6-9 */
+}
+
+#syze_collection{
+	width: 94%;
+	margin: auto 3%;
+}
+
+
+/*****************Entete de la collection**********************/
+.header_collection_name 
+{
+	margin-bottom: 7px;
+}
+
+.block_header_collection
+{
+	border-radius: 0px 0px 2px 2px;
+	background-color: #F4F4F4;
+	margin-right: 11px;
+	padding-top: 2px;
+	width: 299px;
+}
+
+
+
+.pict_header_collection
+{
+	margin: 7px;
+}
+
+.button_text_header_collection
+{
+	width: 180px;
+	float: right;
+	margin-top: 7px;
+}
+
+.collection_parameter
+{
+	display: inline-block;
+	width: 39px;
+	height: 21px;
+	background-image: url("../images/bouton_parametre_collection.png");
+}
+
+.collection_gift
+{
+	display: inline-block;
+	width: 39px;
+	height: 21px;
+	background-image: url("../images/bouton_don_collection.png");
+}
+
+.user_name
+{
+	color:#B71012;
+}
+
+
+/*****************Information produit**********************/
+.content
+{
+	/*border: 2px solid black;*/
+	margin-top: 18px;
+}
+
+.headeritem
+{
+	background-color: #f4f4f4;
+	height: 53px;
+	width: 100%;
+	border-radius: 6px 6px 0px 0px;
+	border-bottom-style:solid;
+	border-bottom-color: #c7c7c7;
+	border-bottom-width: 1px;
+}
+
+.arrow_left
+{
+	background:url(../images/arrow_left.png);
+	height:16px ;
+	width: 9px;
+	position: absolute;
+	right: 15%;
+	margin-top:18px;
+}
+
+.arrow_right
+{
+	background:url(../images/arrow_right.png);
+	height:16px ;
+	width: 9px;
+	position: absolute;
+	right: 10%;
+	margin-top:18px;
+}
+
+.text
+{
+	font-family:"Arial";
+	text-align:left;
+	position: absolute;
+	margin-left: 30px;
+	line-height: 26px;
+	vertical-align: middle;
+}
+
+.textrouge
+{
+	color:#b71012;
+}
+
+/*****************fiche produit**********************/
+.content_item
+{
+	width:100%;
+	height:600px;
+	background-color: blue;
+}
+
+.prix_item
+{
+	width:135px;
+	height:44px;
+	background-color:rgba(155,155,155,0.7);
+	border-radius:3px;
+	padding:5px;
+	float:right;
+	margin-right:20px;
+	margin-top:300px;
+}
+
+.prix_item_content
+{
+	width:90px;
+	height:44px;
+	background-color:#f4f4f4;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+	float:left;
+	opacity:1.0;
+	position:relative;
+}
+
+.prix_item_content_text
+{
+	float:left;
+	margin-left:15px;
+	margin-top:6px;
+	text-align:center;
+	font-family: Arial;
+	font-size:9pt;
+}
+
+.prix_item_content .grey
+{
+	text-align:center;
+	color:#858585;
+}
+
+.prix_item_content_text b
+{
+	color:black;
+}
+
+.prix_item_arrow
+{
+	width:16px;
+	height:16px;
+	background-color:#f4f4f4;
+	float:left;
+	margin-left:1px;
+	padding:14px;
+}
+
+/******************Voir produit*********************/
+.see_product{
+	background: rgb(190,12,14); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(190,12,14,1) 0%, rgba(154,9,10,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(190,12,14,1)), color-stop(100%,rgba(154,9,10,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#be0c0e', endColorstr='#9a090a',GradientType=0 ); /* IE6-9 */
+	height:74px;
+	width:100%;
+	position:relative;
+	margin-top: -74px;
+}
+
+.arrow_see_product{
+	background-image: url('../images/picto_arrow_droite.png');
+	position:absolute;
+	right:1%;
+	top:8px;
+	width:9px;
+	height:16px;
+}
+.titre_see_product{
+	color:#e3c3c3;
+	width:100%;
+	position:absolute;
+	text-align:center;
+	line-height:36px;
+	vertical-align:middle;
+	font-family:"Arial"; /* typo Ã  changer */
+}
+/* --------------------------------------------PROFIL.HTML ------------------------------------------------------ */
+.profil_container
+{
+position: relative;
+width: 100%; 
+height: 322px;
+background-color: #d3d3d3;
+}
+.profil_infos
+{
+position: relative;
+width: 94%; /* Soit 600px;*/
+height: 100%;
+margin: 0 auto;
+background-color:#f4f4f4;
+}
+.profil_avatar
+{
+float: left;
+margin-left: 14px;
+margin-top: 20px;
+margin-right: 22px;
+}
+.profil_description
+{
+
+}
+.profil_stats
+{
+display: inline-block;
+margin-top: 38px;
+float: left;
+width: 33%;
+height: 64px;
+}
+.profil_span_abos
+{
+display: inline-block;
+text-align: center;
+margin-top: 20px;
+width: 202px;
+height: 42px;
+background-color: #af0b0c;
+}
+
+.profil_btn_abos
+{
+margin-top: 20px;
+width: 202px;
+height: 42px;
+background-color: red;
+}
+
+.profil_btn_param
+{
+	
+}
+.profil_btn_like
+{
+	
+}
+
+

@@ -1,0 +1,113 @@
+/*
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 24/01/2013
+@Description :
+Correspond à la page include\inc\menu_right.html
+----------------------------------------------------------------------------------------------------
+*/
+
+body
+{
+background: linear-gradient(to right,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* W3C */
+}
+
+/*-----------------------------------------------------------menu_right.HTML------------------------------------------------------------------------------*/
+
+#right_sidebar_container
+{
+    max-width: 300px;
+    height: 100%;
+    background-color: #515151;
+    position:relative;
+    float:left;
+    right:-320px;
+}
+
+
+#right_sidebar_container ul li
+{
+	background-color: #3d3c3c;
+	border-bottom: 1px solid #515151;
+	display: block;
+}
+
+#right_sidebar_container a
+{
+	color: #edebe8;
+	text-decoration: none;
+	font-size:0.8em;
+	display: block;
+	padding-left: 45px;
+	padding-right: 50px;
+	overflow:hidden;
+}
+
+#right_sidebar_container a p
+{
+	padding: 2px;
+	height: auto;
+	text-align:center; /* centrage horizontal */
+}
+
+#right_sidebar_container a span
+{
+	width:100%; /* largeur zone de texte */
+	vertical-align:middle;
+	display:inline-block;
+	line-height:1.3; /* on rétablit le line-height */
+	text-align:left; /* ... et l'alignement du texte */
+	margin-top:5px;
+}
+
+#colonne_puce
+{
+	background: #ffffff;
+}
+
+#right_column
+{
+	background:#2F2F2F;
+	position: absolute;
+	right: 0px;
+	top:0px;
+	width: 45px;
+	height: 100%;
+
+}
+
+/*Puce*/
+
+#right_sidebar_container .navigation a
+{ 
+    background-image: url(../images/picto_puce_close.jpg), url(../images/bg_notif.png);/*bg_notif.png est répeté pour que la puce aille de haut en bas dans la div*/
+    background-position: right;
+    background-repeat: no-repeat, repeat-y;
+}
+
+/*puce lorsqu'on a ouvert le menu*/
+#right_sidebar_container .navigation .open a 
+{
+    background-image: url(../images/picto_puce_open.jpg); 
+}
+
+/*Sous menu*/
+#right_sidebar_container .navigation ul.subnavigation
+{
+    display: block;
+}
+
+#right_sidebar_container .navigation ul.subnavigation li
+{
+    background-color: #dcdcdc;
+    border-bottom: 1px solid #515151;
+}
+
+#right_sidebar_container.navigation ul.subnavigation sa
+{
+    font-size: 0.8em;
+    color: #555555;
+    text-transform: inherit;
+    font-family: Arial, sans-serif;
+    background-image: none;
+}

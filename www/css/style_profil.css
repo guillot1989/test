@@ -1,0 +1,431 @@
+/***
+*************************************************************************
+@copyright : AgencyBlur / QL_appshop
+@date : 23/01/2013
+@updated : 25/01/2013
+@Description : Style de la page PROFIL avec redimensionnement à 320px
+*************************************************************************
+***/
+
+body
+{
+	margin: 0;
+	padding: 0;
+	/*background-color:#ededed;
+	background-image: -moz-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: -webkit-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: -o-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: -ms-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%)
+	background-repeat: no-repeat;
+	background-size: 100% 100%;*/
+	background: #cacaca; /* Old browsers */
+	background: -moz-linear-gradient(left,  #cacaca 2%, #ededed 45%, #ededed 50%, #ededed 55%, #cacaca 83%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(2%,#cacaca), color-stop(45%,#ededed), color-stop(50%,#ededed), color-stop(55%,#ededed), color-stop(83%,#cacaca)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* IE10+ */
+	background: linear-gradient(to right,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacaca', endColorstr='#cacaca',GradientType=1 ); /* IE6-9 */
+}
+
+@font-face
+{
+	font-family: Abel;
+	src: url('polices/abel/abel-regular-webfont.ttf'),
+     url('polices/abel/abel-regular-webfont.eot'),
+     url('polices/abel/abel-regular-webfont.svg'),
+     url('polices/abel/abel-regular-webfont.woff'); 
+}
+
+/*****************reset**********************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td
+ {
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    vertical-align: baseline;
+}
+
+span{
+	color:#b71012;
+	
+}
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a:link, a:visited, a:visited,a:hover,a:active   {text-decoration:none;}
+
+/*==============================================================================
+CONTAINER
+==============================================================================*/
+
+#profil_container {
+	width: 300px;
+	margin: 0 auto;
+	font-size: 14px;
+	margin-top:18px;
+
+}
+
+
+/*****************TITRES**********************/
+
+h1#profil_name {
+	width:100%;
+        position: relative;
+	margin:0px auto;
+	margin-top: 14px;
+	margin-bottom: 7px;
+	font-weight:bold;
+        font-family: Abel, sans-serif;
+	font-size:32px;
+	text-transform: uppercase;
+}
+
+/*****************DÃ©but content: description profil  **********************/
+
+div#profil_infos_content {
+	background-color:#f4f4f4;
+	width:100%;
+	height:170px;
+	border-radius: 0px 0px 4px 4px;
+	margin-bottom: 15px;
+}
+
+
+div#left {
+	width:100px;
+	height: 100px;
+	float:left;
+	margin-left: 7px;
+	margin-bottom: 30px;
+}
+
+img#profil_image {
+	width:100px;
+	height:100px;	
+	display: block;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+div#right {
+	float:right;
+	width: 173px;
+	margin-top: 10px;
+	margin-left: 10px; 
+	margin-right: 10px; 
+}
+#profil_btn_favoris img{
+	width: 17px;
+	height: 14px;
+}
+#profil_btn_param img {
+	width: 15px;
+	height: 15px;
+}
+#right p#profil_description {
+	font-size: 12px;
+	font-family: "Helvetica", Arial, sans-serif; /* importer la police helvetica */
+	margin-top: 10px;
+	font-style:italic;
+}
+
+#profil_btn_stats {
+	clear: both;
+}
+#profil_btn_stats div{
+	float: left;
+	border-left: solid 1px #FFF;
+	border-right: solid 1px #CCC;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-size: "Helvetica Neue", sans-serif; /* importer la police helvetica neue */
+	max-width: 70px;
+	font-style:italic;
+
+}
+#profil_btn_stats div.first
+{
+	border-left: 0;
+	margin-left: 10px;
+	padding-right: 20px;
+        font-family: "Helvetica", Arial, sans-serif;
+}
+#profil_btn_stats div.center
+{
+	padding: 0 20px;
+        font-family: "Helvetica", Arial, sans-serif;
+}
+#profil_btn_stats div.last
+{
+	border-right: 0;
+	font-family: "Helvetica", Arial, sans-serif;
+	padding-left: 20px;	
+}
+
+#profil_btn_stats div span
+{
+	font-size: 18px;
+}
+
+#profil_btn_abos, #profil_btn_param, #profil_btn_favoris {
+	background: #be0c0e; /* Old browsers */
+	background: -moz-linear-gradient(top,  #be0c0e 0%, #9a090a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#be0c0e), color-stop(100%,#9a090a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #be0c0e 0%,#9a090a 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #be0c0e 0%,#9a090a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#be0c0e', endColorstr='#9a090a',GradientType=0 ); /* IE6-9 */
+	padding: 5px 20px;
+	color: #FFF;
+	font-size:  12px;
+}
+#profil_btn_favoris img{
+	margin-right: 10px;
+	position: relative;
+	top: 3px
+}
+#profil_btn_param img {
+	position: relative;
+	top: 3px
+}
+
+/*==============================================================================
+CONTENT des produits
+==============================================================================*/
+#post_activity 
+{
+    clear: both;
+    width:100%;
+    position: relative;
+    margin:0px auto;
+    margin-top: 14px;
+    margin-bottom: 7px;
+    font-weight:bold;
+    font-family: Abel, sans-serif;
+    font-size:28px;
+    text-transform: uppercase;
+}
+
+
+/* =============================== timeline ================================= */
+
+/*==============================================================================
+CONTENT des produits
+==============================================================================*/
+
+
+.post_content {
+    background-color:#f4f4f4;
+    width:300px;
+    position: relative;
+
+
+}
+
+/************************header des produits***********************************/
+header
+{
+    margin-top: 18px;
+}
+#header_content
+{
+	background-color: #f4f4f4;
+	height: 45px;
+	width: 300px;
+	border-radius: 6px 6px 0px 0px;
+	border-bottom-style:solid;
+	border-bottom-color: #c7c7c7;
+	border-bottom-width: 1px;
+}
+
+#header_content #text
+{
+  
+	text-align:left;
+	position: absolute;
+	margin-left: 3%;
+	line-height: 16px;
+	margin-top:10px;
+	font-size: 14px;
+	font-weight:bold;
+	font-family: Abel, sans-serif;
+	color:#383838;
+}
+#header_content .textrouge
+{
+	color:#b71012;
+}
+
+#header_content #arrow_left
+{
+        background:url(../images/arrow_left.png);
+	height:16px ;
+	width: 9px;
+	position: absolute;
+	right: 27px;
+	margin-top:18px;
+}
+
+#header_content #arrow_right
+{
+	background:url(../images/arrow_right.png);
+	height:16px ;
+	width: 9px;
+	position: absolute;
+	right: 6px;
+	margin-top:18px;
+}
+/************************content***********************************/
+.post_slideshow{
+    width: 300px;
+    position: relative;
+    overflow-x: scroll; 
+    overflow-y: hidden; 
+    height: 210px;
+    
+}
+
+/*++--++--++--++--++--++--++--++--++ ATTENTION C'EST UN CAROUSSEL++--++--++--++--*/
+.post_slideshow ul{
+    width:1000px;
+    height:210px;
+    background-color: blue;
+    
+}
+
+.post_slideshow ul li{
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+
+#pictures1
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 300px;
+    height: 210px;
+    float: left;
+    background-position: center;
+}
+#pictures2
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 300px;
+    height: 210px;
+    float: left;
+    background-position: center;
+}
+#pictures3
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 300px;
+    height: 210px;
+    float: left;
+    background-position: center;
+}
+/********************prix des produits dans le content*************************/
+.post_price {
+    width:135px;
+    height:44px;
+    background-color:rgba(155,155,155,0.7);
+    border-radius:3px;
+    padding:5px;
+    position: relative;
+    float: right;
+    right: 20px;
+    bottom: 80px;
+    font-size: 14px;
+}
+.post_price_content {
+    width:100%;
+    height:44px;
+    background-color:#f4f4f4;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+    float:left;
+    position:relative;
+    border-top: solid 1px #FFF;
+}
+.post_price_content p{
+	margin-top: 5px;
+    width: 90px;
+    height:44px;
+    text-align: center;
+    border-right : solid 1px #CCC;
+    font-weight:bold;
+	font-family: Abel, sans-serif;
+	color:#383838;
+}
+.post_price_content p span{
+    color: #CCC;
+
+}
+.post_price_content a{
+    position: absolute;
+    right: -1px;
+    top: 0;
+    width: 44px;
+    height:44px;
+    background : url(../images/right_arrow.png) center no-repeat;
+    border-left : solid 1px #FFF;
+}
+
+/************************footer***********************************/
+footer
+{
+    background: rgb(190,12,14); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(190,12,14,1) 0%, rgba(154,9,10,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(190,12,14,1)), color-stop(100%,rgba(154,9,10,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#be0c0e', endColorstr='#9a090a',GradientType=0 ); /* IE6-9 */
+    height:45px;
+    width:300px;
+    position:relative;
+	
+}
+
+.arrow_see_product
+{
+    background-image: url('../images/picto_arrow_droite.png');
+    position:absolute;
+    right:8px;
+    top: 13px;
+    width:9px;
+    height:16px;
+}
+.see_title_product
+{
+    color:#e3c3c3;
+    position: absolute;
+    margin-left: 100px;
+    top:13px;
+    font-weight:bold;
+    font-family: Abel, sans-serif;
+}
+

@@ -1,0 +1,299 @@
+/****************************************************************************
+@copyright : AgencyBlur / QL_appshop
+@date : 24/01/2013
+@Description :
+style de la timeline découvrir 
+****************************************************************************/
+
+/** DEFINITION DU BODY */
+
+body
+{
+    margin: auto;
+    width: 100%;
+    background: #cacaca; /* Old browsers */
+    background: -moz-linear-gradient(left,  #cacaca 2%, #ededed 45%, #ededed 50%, #ededed 55%, #cacaca 83%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(2%,#cacaca), color-stop(45%,#ededed), color-stop(50%,#ededed), color-stop(55%,#ededed), color-stop(83%,#cacaca)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* IE10+ */
+    background: linear-gradient(to right,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacaca', endColorstr='#cacaca',GradientType=1 ); /* IE6-9 */
+}
+span{
+    color:#b71012;
+    
+}
+* 
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a:link, a:visited, a:visited,a:hover,a:active   {text-decoration:none;}
+
+/*==============================================================================
+PROFIL 640px
+==============================================================================*/
+
+
+/*==============================================================================
+CONTAINER
+==============================================================================*/
+
+
+.timeline_container {
+width: 600px;
+margin: 0 auto;
+font-size: 28px;
+
+}
+
+/*==============================================================================
+CONTENT TIMELINE
+==============================================================================*/
+.timeline{
+    width:600px;
+    min-height:70px;
+    margin-top: 36px;
+}
+
+#jolielist{
+    display: block;
+    background: url(../images/jolielist.png);
+    background-repeat:no-repeat;
+    height: 60px;
+    width: 234px;
+    float: left;
+    float: top;
+    margin-left: 6px;
+}
+#fb{
+    display: block;
+    background: url(../images/fb.png) no-repeat;
+    height: 60px;
+    width: 60px;
+    float: right;
+    float: top;
+}
+#flux{
+    display: block;
+    background: url(../images/flux.png) no-repeat;
+    height: 60px;
+    width: 60px;
+    float: right;
+    float: top;
+}
+#twitter{
+    display: block;
+    background: url(../images/twitter.png) no-repeat;
+    height: 60px;
+    width: 60px;
+    float: right;
+    float: top;
+    margin-right: 6px;
+}
+
+
+
+
+/*==============================================================================
+CONTENT des produits
+==============================================================================*/
+
+
+.post_content {
+    background-color:#f4f4f4;
+    width:600px;
+    position: relative;
+
+}
+/************************header des produits***********************************/
+header
+{
+	margin-top: 36px;
+}
+
+#header_content
+{
+	background-color: #f4f4f4;
+	height: 90px;
+	width: 600px;
+	border-radius: 12px 12px 0px 0px;
+	border-bottom-style:solid;
+	border-bottom-color: #c7c7c7;
+	border-bottom-width: 2px;
+}
+
+#header_content #text
+{
+  
+	text-align:left;
+	position: absolute;
+	margin-left: 6%;
+	line-height: 32px;
+	margin-top:20px;
+	font-size: 28px;
+	font-weight:bold;
+	font-family: Abel, sans-serif;
+	color:#383838;
+}
+#header_content .textred
+{
+	color:#b71012;
+}
+
+#header_content #arrow_left
+{
+        background:url(../images/arrow_left.png);
+	height:32px ;
+	width: 18px;
+	position: absolute;
+	right: 59px;
+	margin-top:36px;
+}
+
+#header_content #arrow_right
+{
+	background:url(../images/arrow_right.png);
+	height:32px ;
+	width: 18px;
+	position: absolute;
+	right: 17px;
+	margin-top:36px;
+}
+/************************content***********************************/
+.post_slideshow{
+    width: 600px;
+    position: relative;
+    overflow-x: scroll; 
+    overflow-y: hidden; 
+    height: 420px;
+    
+}
+
+/*++--++--++--++--++--++--++--++--++ ATTENTION C'EST UN CAROUSSEL++--++--++--++--*/
+.post_slideshow ul{
+    width:2000px;
+    height:420px;
+    background-color: blue;
+    
+}
+
+.post_slideshow ul li{
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+
+#pictures1
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 600px;
+    height: 420px;
+    float: left;
+    background-position: center;
+}
+#pictures2
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 600px;
+    height: 420px;
+    float: left;
+    background-position: center;
+}
+#pictures3
+{
+    background-image: url('../images/test1.jpg');
+    background-size: cover;
+    width: 600px;
+    height: 420px;
+    float: left;
+    background-position: center;
+}
+/********************prix des produits dans le content*************************/
+.post_price {
+    width:270px;
+    height:88px;
+    background-color:rgba(155,155,155,0.7);
+    border-radius:6px;
+    padding:10px;
+    position: absolute;
+    right: 40px;
+    bottom: 160px;
+    font-size: 28px;
+
+}
+.post_price_content {
+    width:100%;
+    height:88px;
+    background-color:#f4f4f4;
+    border-top-left-radius:6px;
+    border-bottom-left-radius:6px;
+    float:left;
+    position:relative;
+    border-top: solid 2px #FFF;
+}
+.post_price_content p{
+    margin-top: 10px;
+    width: 180px;
+    height:88px;
+    text-align: center;
+    border-right : solid 2px #CCC;
+    font-weight:bold;
+	font-family: Abel, sans-serif;
+	color:#383838;
+}
+.post_price_content p span{
+    color: #CCC;
+
+}
+.post_price_content a{
+    position: absolute;
+    right: -2px;
+    top: 0;
+    width: 88px;
+    height:88px;
+    background : url(../images/right_arrow.png) center no-repeat;
+    border-left : solid 2px #FFF;
+}
+
+/************************footer***********************************/
+footer
+{
+    background: rgb(190,12,14); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(190,12,14,1) 0%, rgba(154,9,10,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(190,12,14,1)), color-stop(100%,rgba(154,9,10,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#be0c0e', endColorstr='#9a090a',GradientType=0 ); /* IE6-9 */
+    height:90px;
+    width:600px;
+    position:relative;
+	
+}
+
+.arrow_see_product
+{
+    background-image: url('../images/picto_arrow_droite.png');
+    position:absolute;
+    right:17px;
+    top: 26px;
+    width:18px;
+    height:32px;
+}
+.titre_see_product
+{
+    color:#e3c3c3;
+    position: absolute;
+    margin-left: 200px;
+    top:26px;
+    font-weight:bold;
+    font-family: Abel, sans-serif;
+}

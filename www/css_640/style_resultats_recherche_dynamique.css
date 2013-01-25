@@ -1,0 +1,55 @@
+/*
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 24/01/2013
+@Description :
+Recherche dynamique
+----------------------------------------------------------------------------------------------------
+*/
+/*containeur*/
+#dynamic_search_result_container
+{
+	width: 640px;
+	height:500px;
+	background-color: #2f2f2f;
+	display:none;
+}
+
+/*ligne de resultat*/
+.dynamic_search_result_line
+{
+	width: 600px;
+	min-height: 150px;
+	margin-right: 20px;
+	margin-left: 20px;
+	padding-top: 20px;
+}
+
+/*image numero 1 de gauche*/
+.dynamic_search_result_image1 img
+{
+	height: 150px;
+	width: 150px;
+	float: left; 
+	margin-left: 20px;
+}
+
+/*image numero 2 central*/
+.dynamic_search_result_image2 img
+{
+	height: 150px;
+	width: 150px;
+	float: left; 
+	margin-left: 55px;
+}
+
+/*image numero 3 de droite*/
+.dynamic_search_result_image3 img
+{
+	height: 150px;
+	width: 150px;
+	float: right;
+	margin-right: 20px;
+}
+
+

@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	 height:480px;
+	 widht:320px;
+ }
+ 
+ 
+/*en tête*/
+	 
+ .imgbdx{
+	position:absolute;
+	z-index:2;
+ }
+/*fond*/ 
+ .imgfd{
+	 position:absolute;
+	 z-index:1;
+	 }
+ #fdcorps{
+	position:absolute;
+	height:153px;
+	width:320px;
+	top: 50px;
+	z-index:3;
+	
+}
+ 
+ /*fond Bouton*/
+#fdbutton{
+	position:absolute;
+	height:153px;
+	width:320px;
+	top: 147px;
+	z-index:3;
+}
+
+/*bouton désabonner*/
+.button1{
+	position:absolute;
+	width: 320px;
+	height:39px;
+	background-image:url(../images/buttonRed.jpg);
+	}
+
+/*bouton suivre*/
+.button2{
+	position:absolute;
+	top: 36px;
+	width: 320px;
+	height:39px;
+	background-image:url(../images/buttonRed.jpg);
+	
+	}
+
+/*bouton bloquer*/
+.button3{
+	position:absolute;
+	top: 73px;
+	width: 320px;
+	height:39px;
+	background-image:url(../images/buttonRed.jpg);
+	
+	}	
+
+/*parametre des bouton de type input*/
+.modif{
+	color:#FFF;
+	float:left;
+}

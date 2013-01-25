@@ -1,0 +1,198 @@
+/*
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 23/01/2013
+@Description :
+Style Liste Collection 600px
+----------------------------------------------------------------------------------------------------
+*/
+
+@font-face
+{
+	font-family: Abel;
+	src: url('polices/abel/abel-regular-webfont.ttf'),
+     url('polices/abel/abel-regular-webfont.eot'),
+     url('polices/abel/abel-regular-webfont.svg'),
+     url('polices/abel/abel-regular-webfont.woff'); 
+}
+
+/*****************reset**********************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td
+ {
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    vertical-align: baseline;
+}
+
+/*TEXTE*/
+body
+{
+    width: 100%;
+    font-family: Abel, sans-serif;
+    font-size:14pt;
+    color: #383838;
+    margin: 0px;
+    
+    background: #cacaca; /* Old browsers */
+    background: -moz-linear-gradient(left, #cacaca 2%, #ededed 45%, #ededed 50%, #ededed
+            55%, #cacaca 83%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(2%, #cacaca),
+            color-stop(45%, #ededed), color-stop(50%, #ededed),
+            color-stop(55%, #ededed), color-stop(83%, #cacaca) );
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #cacaca 2%, #ededed 45%, #ededed 50%,
+            #ededed 55%, #cacaca 83%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #cacaca 2%, #ededed 45%, #ededed 50%, #ededed
+            55%, #cacaca 83%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #cacaca 2%, #ededed 45%, #ededed 50%, #ededed
+            55%, #cacaca 83%); /* IE10+ */
+    background: linear-gradient(to right, #cacaca 2%, #ededed 45%, #ededed 50%, #ededed
+            55%, #cacaca 83%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#cacaca',
+            endColorstr='#cacaca', GradientType=1 ); /* IE6-9 */
+}
+
+/*LIEN*/
+a
+{
+	font-size:28pt;
+	color: #B71012;
+	font-family: Abel, sans-serif;
+}
+
+/*TITRE*/
+h1
+{
+	font-size:44pt;
+	color: #363636;
+	font-family: Abel, sans-serif;
+}
+
+/*-----------------------------------------------------------liste_collection.HTML------------------------------------------------------------------------------*/
+
+#container_liste_collection ul li
+{
+    background-color: #3d3c3c;
+    border-bottom: 2px solid #515151;
+    display: block;
+
+}
+
+#container_liste_collection{
+	width: 600px;
+	margin: auto;
+}
+
+#container_liste_collection a
+{
+    color: #edebe8;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    line-height: 90px;
+    padding-left: 40px;
+}
+
+/*Puce*/
+#container_liste_collection .navigation a 
+{ 
+    background: url(../images/picto_puce_close.jpg) right no-repeat; 
+}
+
+#container_liste_collection .navigation .open a 
+{
+    background-image: url(../images/picto_puce_open.jpg); 
+}
+
+
+#container_liste_collection .navigation .add_collection, #container_liste_collection .navigation .writing_collection
+{
+    background-color: #dbdbdb;
+}
+
+/*liste des collections*/
+#container_liste_collection .navigation .add_collection a
+{
+    background-image: url(../images/picto_plus.jpg);
+    color: #b71012;
+    font-size: 24pt;
+    text-transform: inherit;
+
+}
+
+#container_liste_collection .navigation li.public_collection 
+{
+    background-color: #434242;
+}
+
+/*lorque'on a cliqué sur "ajouter une colection" (voir psd "liste_collection v01 & v01.2")*/
+
+#container_liste_collection .navigation .writing_collection a
+{
+    color: #4c4c4c;
+    background-image: url(../images/picto_plus_writing.jpg);
+    background-position: right;
+    font-size: 24pt;
+    text-transform: inherit;
+}
+
+/*lorsqu'on nomme une collection*/
+
+#container_liste_collection .navigation li.new_collection 
+{
+    background-repeat: no-repeat;
+    background-color: #252424;
+    font-size: 24pt;
+    text-transform: inherit;
+    height: 90px;
+}
+
+/* à remettre en forme */
+.submit_collection 
+{
+	width: 90px;
+	height: 90px;
+	background: url(../images/picto_ok.jpg);
+	background-repeat: no-repeat;
+	text-transform: inherit;
+	position: absolute;
+	border: 0;
+}
+
+.submit_collection:hover
+{
+	cursor:pointer;
+}
+
+#container_liste_collection .navigation .new_collection #input_new_collection
+{
+	width: 505px;
+	height: 83px;
+}
+
+/* ID pour le textbox nom de collection */
+#type_collection
+{
+    background-color:#252424;
+    color: #6f6d6b;
+    border: none;
+	margin-top: auto;
+	margin-bottom: auto;
+	height: 86px;
+}
+
+#container_liste_collection .navigation .writing_collection{
+    display : none;
+}

@@ -1,0 +1,60 @@
+/*
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 24/01/2013
+@Description :
+Correspond à la page home.html
+----------------------------------------------------------------------------------------------------
+*/
+
+/*
+Mise en Page
+*/
+
+body {
+	display:inline-block;
+	width:100%;
+	background-color:black;
+}
+
+/*
+Contener des 3 types de menu.
+*/
+#interface{
+
+}
+
+/*
+Disposition des Différents bloques
+*/
+#left #right #center {
+	display:block;
+	position:relative;
+}
+
+/*
+Positionnement du Menu Slider de Gauche
+*/
+#left{
+	float:left;
+	margin-left:-200px;
+	border:15px solid;
+	width: 620px;
+}
+
+/*
+Positionnement de la page Centrale
+*/
+#center{
+	float:left;
+	border:25px solid black;
+	width:640px;
+}
+
+/*
+Positionnement du Menu Slider de Droite
+*/
+#right{
+	float:left;
+	width: 620px;
+}

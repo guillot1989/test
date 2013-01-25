@@ -1,0 +1,80 @@
+body
+{
+	width:640px;
+}
+
+
+
+.param 
+{
+	border-bottom: 1px solid #515151;
+	height: 90px;
+	background:url('../images/picto_puce_close.jpg') no-repeat left #3C3C3C;
+}
+
+a 
+{
+	font-size:2em;
+	text-decoration: none;
+	color:#e7e7e7;	
+	text-transform: uppercase;
+	padding: 20px 100px;
+	display: block;
+}
+
+.valid_infos
+{
+	width: 90px;
+	height: 90px;
+	background: url(../images/picto_ok.jpg);
+	background-repeat: no-repeat;
+	text-transform: inherit;
+	position: absolute;
+	border: 0;
+}
+
+.valid_infos
+{
+	cursor:pointer;
+}
+
+.text_infos
+{
+	font-size: 2em;
+    background-color:#252424;
+    width:450px;
+    color: #6f6d6b;
+    border: none;
+    margin-left: 90px;
+	margin-top: auto;
+	margin-bottom: auto;
+	height: 86px;
+	padding-left:10px;
+}
+
+.area_infos
+{
+    background-color:#252424;
+    width:626px;
+    color: #6f6d6b;
+    border: none;
+    margin-left: 0px;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-left:10px;
+	height:82px;
+}
+
+#valid_description
+{
+
+	margin-left:450px;
+	margin-top:-70px;
+}
+
+#text_description
+{
+	border-bottom: 1px solid #515151;
+	height: 90px;
+	background: left #3C3C3C;
+}

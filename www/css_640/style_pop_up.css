@@ -1,0 +1,96 @@
+/*----------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 22/01/2013
+@Description :
+POP UP
+style 640
+------------------------------------------------------------------------------*/
+
+body
+{
+/*background-color:#ededed;
+background-image: -moz-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+background-image: -webkit-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+background-image: -o-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+background-image: -ms-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+background-image: radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%)
+background-repeat: no-repeat;
+background-size: 100% 100%;*/
+background: #cacaca; /* Old browsers */
+background: -moz-linear-gradient(left,  #cacaca 2%, #ededed 45%, #ededed 50%, #ededed 55%, #cacaca 83%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(2%,#cacaca), color-stop(45%,#ededed), color-stop(50%,#ededed), color-stop(55%,#ededed), color-stop(83%,#cacaca)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* IE10+ */
+background: linear-gradient(to right,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacaca', endColorstr='#cacaca',GradientType=1 ); /* IE6-9 */
+}
+
+/*==============================================================================
+-----------------------------------POP UP---------------------------------------
+==============================================================================*/
+
+/******************* Début du POP UP************************/
+
+/* style css pour pour l'alerte positive */
+#content_pop_up_alert_pos
+{
+    background: #89a521; /* Old browsers */
+    background: -moz-linear-gradient(top, #89a521 0%, #528109 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#89a521), color-stop(100%,#528109)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #89a521 0%,#528109 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #89a521 0%,#528109 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #89a521 0%,#528109 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #89a521 0%,#528109 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#89a521', endColorstr='#528109',GradientType=0 ); /* IE6-9 */
+    height:88px;
+    width:640px;
+    position:relative;
+    margin: auto;
+}
+
+/* style css pour pour l'alerte négative */
+#content_pop_up_alert_neg
+{
+    background: rgb(190,12,14); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(190,12,14,1) 0%, rgba(154,9,10,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(190,12,14,1)), color-stop(100%,rgba(154,9,10,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(190,12,14,1) 0%,rgba(154,9,10,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#be0c0e', endColorstr='#9a090a',GradientType=0 ); /* IE6-9 */   
+    height:88px;
+    width:640px;
+    position:relative;
+    margin: auto;
+}
+.text_pop_up
+{
+    /*color:#e3c3c3;*/
+    width:100%;
+    position:absolute;
+    text-align:center;
+    font-family: Helvetica, Arial;
+    font-size: 20pt;
+    color: white;
+    padding: 10px;
+}
+
+.text_pop_up_gras
+{
+    font-weight: bold;
+    font-size: 24pt;
+}
+
+/*******************Fin du POP UP************************/
+
+/*==============================================================================
+---------------------------------FIN POP UP-------------------------------------
+==============================================================================*/
+
+
+
+
+
+

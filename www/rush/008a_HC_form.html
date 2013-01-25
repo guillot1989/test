@@ -1,0 +1,63 @@
+<!--
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 22/01/2013
+@Description : Formulaire d'inscription
+-----------------------------------------------------------------------------------------------------
+-->
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Titre de la page</title>
+  <link rel="stylesheet" href="../css/style_inscription.css">
+  <script src="../js/jquery.js"></script>
+  <script src="../js/function.js"></script>
+
+
+</head>
+
+
+<body>
+	<div id="inscription_container">
+
+		<form method="POST" action="traitement.js">
+			
+			<!--***************NOM**********************-->
+			<label class="label_column">Nom</label>
+			<input id="type_text_right" type="text" name="nom" size="30" maxlength="20">
+			<br><br>
+			
+			<!--***************PRENOM**********************-->
+			<label class="label_column">Prénom</label>
+			<input id="type_text_right" type="text" name="prenom" size="30" maxlength="20">
+			<br><br>
+				
+			<!--***************PSEUDO**********************-->
+			<label class="label_column">Pseudo</label>
+			<input id="type_text_right" type="text" name="pseudo" size="30" maxlength="20" required>
+			<br><br>
+			
+			<!--***************ADRESSE MAIL**********************-->
+			<label>Entrez votre adresse email</label><br>
+			<input type="email" name="email" size="30" maxlength="55" required>
+			<br><br>
+
+			<!--***************CONFIRMER ADRESSE MAIL / VOIR NAME**********************-->
+			<label>Confirmer votre adresse email</label><br>
+			<input type="email" name="email" size="30" maxlength="55" required>
+			<br><br>
+
+			<!--***************MDP**********************-->
+			<label>Mot de passe</label><br>
+			<input id="type_text_right" pattern=".{8,12}" type="password" name="mdp" maxlength="12" required>
+			<br> <br>
+			<label>Confirmer mot de passe</label><br>
+			<input id="type_text_right" pattern=".{8,12}" type="password" name="mdp2" maxlength="12" required>
+			<br><br>
+
+			<input type="submit" value="Enregistrer"> 
+		</form>
+	</div> 
+</body>
+</html>

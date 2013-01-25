@@ -1,0 +1,48 @@
+<!-- 
+---------------------------------------------------
+parser de flux XML search tester sur un terminal mobile
+---------------------------------------------------
+ -->
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Parser du XML avec jQuery</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(  function(){
+
+    
+
+        $.ajax({
+            type: "GET",
+            url: "http://lyon4.steven-titren.com/collections?user_id=1",
+            dataType: "xml",
+            complete : function(data, status) {
+                var products = data.responseXML;
+                var appendHtml = "";
+                $(products).find('collection').each(function(){
+                  
+                    var collection_id = $(this).find('collection_id').text();
+					var name = $(this).find('name').text();
+					var collection_type_id = $(this).find('collection_type_id').text();
+					var favorite = $(this).find('favorite').text();
+					
+                    
+                    appendHtml += " <strong>name: "+name+"</strong><br> collection_id:"+collection_id+"<br> collection_type_id:"+collection_type_id+" <br> favorite:"+favorite+" <br>  ";
+                });
+                $("#produit").append(appendHtml);
+            }});    
+
+}
+                 );   
+</script>
+</head>
+<body>
+    <div id="container">
+        
+        <ul id="produit" />
+    </div>
+</body>
+</html>

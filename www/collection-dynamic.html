@@ -1,0 +1,86 @@
+<!--
+----------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : xx/xx/xxxx
+@Description :
+Affichage dynamique des collections
+-----------------------------------------------------------------------------------------------------
+-->
+
+<!doctype html>
+<html lang="fr">
+    <head>
+      	<meta charset="utf-8">
+      	<title>Collection</title>
+      	<link rel="stylesheet" type="text/css" href="./css/style_collection.css">
+      	<link id="css" rel="stylesheet"  type="text/css" href="./css/styles.css">
+		<script src="./js/jquery.js"></script>
+		<script src="./js/function.js"></script>
+		<script type="text/javascript">
+		function proURIDecoder(val)
+        {
+           val=val.replace(/\+/g, '%20');
+           var str=val.split("%");
+           var cval=str[0];
+           for (var i=1;i<str.length;i++)
+           {
+                cval+=String.fromCharCode(parseInt(str[i].substring(0,2),16))+str[i].substring(2);
+           }
+
+           return cval;
+        }
+
+		$(document).ready( function(){
+			
+			 var parameters = location.search.substring(1).split("&");
+			 var param_id_user = parameters[0].split("=");
+			 var param_name_user = parameters[1].split("=");
+			 var param_id_collection = parameters[2].split("=");
+			 var param_name_collection = parameters[3].split("=");
+
+			 
+			 var appendHTML='<div id="header_collection"><div id="header_collection_name"><span>'+proURIDecoder(param_name_collection[1])+'</span></div><div id="block_header_collection"><div id="pict_header_collection"></div><p id="button_text_header_collection"><span class="collection_parameter"></span><span class="collection_gift"></span><br/>Créé par <span class="user_name">'+proURIDecoder(param_name_user[1])+'</span></p></div></div>'
+			 $('body').append(appendHTML);
+			 
+	        $.ajax({
+	            type: "GET",
+	            url: "http://api.jolielist.com/collection/products?user_id="+param_id_user[1]+"&collection_id="+param_id_collection[1], 
+	            dataType: "xml",
+	            complete : function(data, status) {
+	                var products = data.responseXML;
+	  
+	                $(products).find('product').each(function(){
+	                	var id = $(this).attr('id');
+	                    var titre = $(this).find('title').text();
+						var description = $(this).find('description').text();
+						var picture= $(this).children('picture_url').text();
+						var small_picture= $(this).find('small_picture_url').text();
+						var price = $(this).find('price').text();
+						var favorite_count = $(this).find('favorite_count').text();
+						var shared_cound = $(this).find('shared_cound').text();
+						var comments_count = $(this).find('comments_count').text();
+						
+							
+							$(this).find('shop').each(function(){
+								var shop_id = $(this).children('id').text();
+								var shop_name = $(this).find('name').text();
+								var shop_picture= $(this).find('picture_url').text();
+								var shop_redirect_url = $(this).find('redirect_url').text();
+								
+							});
+
+							appendHTML = '<div id="global_content"><div id="header_bloc_prod"><div id="header_bloc_prod_content"> <a href="#"> <span id="arrow_right"></span></a><a href="#"> <span id="arrow_left"> </span></a> <p id="text"> Produit <span class="red_text">'+titre+'</span> <br> par <span class="red_text">'+proURIDecoder(param_name_user[1])+'</span> à 23h00  </p> </div></div><div id="content_bloc_prod" style="background:url('+small_picture+'); background-position:center; background-size:cover;"><div id="prix_prod"><div id="prix_prod_content"><span id="prix_prod_content_text"><span class="grey">à partir de<br/><b>'+price+'€</b></span></span></div><div id="prix_prod_arrow"><img src="images/prix_item_arrow.png" width="16" height="16" alt="#" /></div></div></div><div id="footer_bloc_prod"><span id="titre_footer">Voir le produit</span><span id="arrow_footer_bloc_prod"></span></div></div>';
+							
+							$('body').append(appendHTML);
+	                    });
+	                 
+	            }});    
+
+			});   
+		</script>
+    
+    </head>
+    <body>
+     
+    </body>
+</html>

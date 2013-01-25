@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	 height:960px;
+	 widht:640px;
+ }
+ 
+ 
+/*en tête*/
+	 
+ .imgbdx{
+	position:absolute;
+	z-index:2;
+ }
+/*fond*/ 
+ .imgfd{
+	 position:absolute;
+	 z-index:1;
+	 }
+	 
+/*div du fond */
+ #fdcorps{
+	position:absolute;
+	height:153px;
+	width:320px;
+	top: 50px;
+	z-index:3;
+	
+}
+ 
+ /*Bouton*/
+#fdbutton{
+	position:absolute;
+	height:153px;
+	width:320px;
+	top: 147px;
+	z-index:3;
+}
+
+/*bouton Partager*/	
+.button1{
+	position:absolute;
+	width: 320px;
+	height:39px;
+	background-image:url(../images/buttonRed.jpg);
+	top: -2px;
+	}
+
+/*bouton Supprimer*/
+.button2{
+	position:absolute;
+	top: 36px;
+	width: 320px;
+	height:39px;
+	background-image:url(../images/buttonRed.jpg);
+	
+	}
+	
+

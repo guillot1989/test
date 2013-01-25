@@ -1,0 +1,150 @@
+/*
+      ----------------------------------------------------------------------------------
+      @copyright : AgencyBlur / QL_appshop
+      @date : 21/01/2013
+      @Description :
+      CSS de la barre de recherche qui se situe au dessus du menu
+      Version pour resolution 640
+      -----------------------------------------------------------------------------------------------------
+      */
+      
+      
+      html 
+{
+	font-size: 100%;
+}
+
+body 
+{
+	width: 100%;
+	font-size: 1.7em;
+	margin: 0px;
+	/*background-color:#ededed;
+	background-image: -moz-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: -webkit-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: -o-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: -ms-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%)
+	background-repeat: no-repeat;
+	background-size: 100% 100%;*/
+	background: #cacaca; /* Old browsers */
+	background: -moz-linear-gradient(left, #cacaca 2%, #ededed 45%, #ededed 50%, #ededed
+		55%, #cacaca 83%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(2%, #cacaca),
+		color-stop(45%, #ededed), color-stop(50%, #ededed),
+		color-stop(55%, #ededed), color-stop(83%, #cacaca) );
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #cacaca 2%, #ededed 45%, #ededed 50%,
+		#ededed 55%, #cacaca 83%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #cacaca 2%, #ededed 45%, #ededed 50%, #ededed
+		55%, #cacaca 83%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #cacaca 2%, #ededed 45%, #ededed 50%, #ededed
+		55%, #cacaca 83%); /* IE10+ */
+	background: linear-gradient(to right, #cacaca 2%, #ededed 45%, #ededed 50%, #ededed
+		55%, #cacaca 83%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#cacaca',
+		endColorstr='#cacaca', GradientType=1 ); /* IE6-9 */
+}
+
+#contentsearchnav
+	/*conteneur qui regroupe les div design_search_haut et design_search_bas*/
+	{
+	margin: auto;
+	width: 520px;
+	height: 88px;
+}
+
+#design_search_haut /*Cette div permet de mettre en place le dégradé*/
+	{
+	background: #b81113; /* Anciens navigateurs */
+	background: -moz-linear-gradient(top, #b81113 0%, #da3739 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b81113),
+		color-stop(100%, #da3739) ); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #b81113 0%, #da3739 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #b81113 0%, #da3739 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #b81113 0%, #da3739 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, #b81113 0%, #da3739 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#b81113',
+		endColorstr='#da3739', GradientType=0 ); /* IE6-9 */
+	width: 100%;
+	height: 44px;
+}
+
+#design_search_bas
+	/*Cette div permet de mettre une couleur sans dégradé*/ {
+	background-color: #b71012;
+	width: 520px;
+	height: 44px;
+}
+
+#design_search_haut .cancel_button 
+{
+	margin-right: 20px;
+	margin-top: 15px;
+	float: right;
+	width: 160px;
+	height: 60px;
+	font-size:1em;
+    font-family: Arial,sans-serif;
+    text-align: center;
+    background-image:linear-gradient(#363636, #252525);
+    color: white;
+    border-radius: 3px;
+    border: 0px;
+    font-weight: bold;    
+}
+
+#design_search_haut .cancel_button:active
+{
+	background-image: linear-gradient(#363636, #363636);
+}
+
+
+#search_nav /*Div recherche au dessus du menu */
+{
+	padding-left: 68px;
+	width: 416px;
+	height: 60px;
+	border-radius: 20px;
+	margin-top: 12px;
+	margin-left: 20px;
+	padding-right : 60px;
+	font-size:1em;
+}
+
+
+#icon_search
+/*Div icone, (la petite loupe juste avant le texte de recherche)*/ 
+{
+	position: absolute;
+	top: 35px;
+	margin-left: 40px;
+	/*background : url(./images/#); rajouter le lien vers l'image "loupe" pour
+	design 640*/
+}
+
+#icon_clear
+/*Icone en forme de croix pour effacer texte invisible de base et
+qui doit apparaitre lorsque du texte est tap� dans l'input search_nav*/
+{
+	position: absolute;
+	top: 28px;
+	margin-left: 380px;
+	display:none;
+	/*background: url(./images/ico_clear.png); rajouter le lien vers l'image "croix" pour
+	design 640*/
+}
+
+#contentResult
+{
+	margin: auto;
+	background-color: #515151;
+	width:640px;
+	height: 870px;
+	display:none;
+}

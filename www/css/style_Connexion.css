@@ -1,0 +1,153 @@
+/****************************************************************************
+@copyright : AgencyBlur / QL_appshop
+@date : 23/01/2013
+@updated : 25/01/2013
+@Description :
+style page de connexion en 320px
+****************************************************************************/
+body
+{
+    background: #cacaca; /* Old browsers */
+    background: -moz-linear-gradient(left,  #cacaca 2%, #ededed 45%, #ededed 50%, #ededed 55%, #cacaca 83%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(2%,#cacaca), color-stop(45%,#ededed), color-stop(50%,#ededed), color-stop(55%,#ededed), color-stop(83%,#cacaca)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* IE10+ */
+    background: linear-gradient(to right,  #cacaca 2%,#ededed 45%,#ededed 50%,#ededed 55%,#cacaca 83%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacaca', endColorstr='#cacaca',GradientType=1 ); /* IE6-9 */
+    width: 100%;
+    margin: 0;
+	 
+}
+ #connection_container 
+{
+	width: 320px;
+        margin: auto;
+	position:relative;
+}
+
+/*  style menu top */
+
+#connection_content
+{
+	background: url(../images/background_connexion.jpg) no-repeat;
+        height: 600px;
+}	 
+#connection_button_content
+{
+    background-color:#333;
+    padding: 0 0 15px 0;
+    height:auto;
+    width:320px;
+    position: absolute;
+    float: right;
+    bottom: 0;
+    border-radius: 5px 5px 0 0; 
+}
+
+
+#connection_button_content img {
+	width: 300px;
+	height: 44px;
+}
+
+.connection_button {
+	margin: auto;
+	display: block;
+	margin-top: 15px;
+	width: 300px;
+	height: 44px;
+	border-radius: 5px;
+	border: none;
+}
+
+#connection_form 
+{
+	width: 100%;
+}
+
+form {
+	margin: 0 auto 0 auto;
+	padding: 0;
+	display: block;
+	width: 300px;
+}
+
+input {
+	width: 296px;
+	margin: 0;
+	padding: 5px 0 5px 0;
+	font-size: 12px;
+	height: 20px;
+	color:#FFF;
+}
+
+input[type="email"] {
+	border: none;
+	border-bottom: 1px solid #DDD;
+	background: transparent;
+}
+
+input[type="password"] {
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #DDD;
+}
+
+button {
+	font-family: Arial;
+	width: 300px;
+	border: none;
+	margin: 5px auto 0 auto;
+	height: 30px;
+	color: #FFF;
+	font-size: 14px;
+	vertical-align: middle;
+	background: #be0c0e; /* Old browsers */
+	background: -moz-linear-gradient(top, #be0c0e 0%, #9a090a 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #be0c0e),
+		color-stop(100%, #9a090a) ); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #be0c0e 0%, #9a090a 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #be0c0e 0%, #9a090a 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #be0c0e 0%, #9a090a 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, #be0c0e 0%, #9a090a 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#be0c0e',
+		endColorstr='#9a090a', GradientType=0 ); /* IE6-9 */
+}
+
+#connection_button_inscription {
+	width: 300px;
+	margin: 5px auto 0 auto;
+	height: 30px;
+	text-align: center;
+	font-size: 14px;
+	background: #be0c0e; /* Old browsers */
+	background: -moz-linear-gradient(top, #be0c0e 0%, #9a090a 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #be0c0e),
+		color-stop(100%, #9a090a) ); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #be0c0e 0%, #9a090a 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #be0c0e 0%, #9a090a 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #be0c0e 0%, #9a090a 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, #be0c0e 0%, #9a090a 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#be0c0e',
+		endColorstr='#9a090a', GradientType=0 ); /* IE6-9 */
+}
+#connection_button_inscription a
+{
+	text-decoration: none;
+	font-family: Arial;
+	margin: auto;
+	display: block;
+	padding-top: 6px;
+	color: #FFF;
+}

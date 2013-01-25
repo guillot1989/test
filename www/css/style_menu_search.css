@@ -1,0 +1,147 @@
+/*
+      ----------------------------------------------------------------------------------
+      @copyright : AgencyBlur / QL_appshop
+      @date : 21/01/2013
+      @Description :
+      CSS de la barre de recherche qui se situe au dessus du menu
+      -----------------------------------------------------------------------------------------------------
+      */
+html 
+{
+	font-size: 100%;
+}
+
+body 
+{
+	width: 260px;
+	font-size: 0.85em;
+	margin: 0px;
+	/*background-color:#ededed;
+	background-image: -moz-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: -webkit-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: -o-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: -ms-radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%);
+	background-image: radial-gradient(50% 50%, circle cover, #ededed, #cacaca 100%)
+	background-repeat: no-repeat;
+	background-size: 100% 100%;*/
+	background: #cacaca; /* Old browsers */
+	background: -moz-linear-gradient(left, #cacaca 2%, #ededed 45%, #ededed 50%, #ededed
+		55%, #cacaca 83%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(2%, #cacaca),
+		color-stop(45%, #ededed), color-stop(50%, #ededed),
+		color-stop(55%, #ededed), color-stop(83%, #cacaca) );
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #cacaca 2%, #ededed 45%, #ededed 50%,
+		#ededed 55%, #cacaca 83%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #cacaca 2%, #ededed 45%, #ededed 50%, #ededed
+		55%, #cacaca 83%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #cacaca 2%, #ededed 45%, #ededed 50%, #ededed
+		55%, #cacaca 83%); /* IE10+ */
+	background: linear-gradient(to right, #cacaca 2%, #ededed 45%, #ededed 50%, #ededed
+		55%, #cacaca 83%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#cacaca',
+		endColorstr='#cacaca', GradientType=1 ); /* IE6-9 */
+}
+
+#contentsearchnav
+	/*conteneur qui regroupe les div design_search_haut et design_search_bas*/
+	{
+	/*margin: auto;*/
+	width: 260px;
+	height: 44px;
+	position:relative;
+	left:-260px;
+}
+
+#design_search_haut /*Cette div permet de mettre en place le dégradé*/
+	{
+	background: #b81113; /* Anciens navigateurs */
+	background: -moz-linear-gradient(top, #b81113 0%, #da3739 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b81113),
+		color-stop(100%, #da3739) ); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #b81113 0%, #da3739 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #b81113 0%, #da3739 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #b81113 0%, #da3739 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, #b81113 0%, #da3739 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#b81113',
+		endColorstr='#da3739', GradientType=0 ); /* IE6-9 */
+	width: 260px;
+	height: 22px;
+}
+
+#design_search_bas
+	/*Cette div permet de mettre une couleur sans dégradé*/ {
+	background-color: #b71012;
+	width: 260px;
+	height: 22px;
+}
+
+#design_search_haut .cancel_button 
+{
+	margin-right: 10px;
+	margin-top: 7px;
+	float: right;
+	width: 50px;
+	height: 20px;
+	font-size:0.8em;
+    font-family: Arial,sans-serif;
+    text-align: center;
+    background-image:linear-gradient(#363636, #252525);
+    color: white;
+    border-radius: 3px;
+    border: 0px;
+    font-weight: bold;    
+    display: none;
+}
+
+#design_search_haut .cancel_button:active
+{
+	background-image: linear-gradient(#363636, #363636);
+}
+
+
+#search_nav /*Div recherche au dessus du menu */
+{
+	padding-left: 34px;
+	width: 208px;
+	height: 30px;
+	border-radius: 20px;
+	margin-top: 7px;
+	margin-left: 10px;
+	padding-right : 30px;
+}
+
+
+#icon_search
+/*Div icone, (la petite loupe juste avant le texte de recherche)*/ 
+{
+	position: absolute;
+	top: 13px;
+	margin-left: 20px;
+	background : url(./images/icosearch_03.png);
+}
+
+#icon_clear
+/*Icone en forme de croix pour effacer texte invisible de base et
+qui doit apparaitre lorsque du texte est tap� dans l'input search_nav*/
+{
+	position: absolute;
+	top: 14px;
+	margin-left: 190px;
+	display:none;
+	background: url(./images/ico_clear.png);
+}
+
+#contentResult
+{
+	margin: auto;
+	background-color: #515151;
+	height: 435px;
+	width:320px;
+	display:none;
+}

@@ -1,0 +1,91 @@
+<!------------------------------------------------------------------------------
+@copyright : AgencyBlur / QL_appshop
+@date : 21/01/2013
+@updated : 23/01/2013
+@Description :
+Fil d'actualit�s 
+Correspond � la page d'accueil de l'utilisateur connect� avec les actualit�s 
+produits et collections
+------------------------------------------------------------------------------->
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>actualité</title>
+		<link rel="stylesheet" type="text/css" href="./css/style_actualites.css" />
+		<script src="./js/jquery.js"></script>
+		<script src="./js/infinite_scroll.js"></script>
+		<script src="./js/function.js"></script>
+	</head>
+ <body>      
+
+	<div id="global_content">
+	
+<!------------------------------- menu_reseau --------------------------------->
+            <div class="menu_network">
+                    <a id="jolielist" href="#"></a>
+                    <a id="twitter" href="#"></a>
+                    <a id="flux" href="#"></a>
+                    <a id="fb" href="#"></a>
+            </div>
+<!--------------------------- bloc voir le produit ---------------------------->
+            <div id="header_bloc_prod">
+                <div id="header_bloc_prod_content"> <!-- contenu de l'entete du bloc_produit -->
+                    <span id="text"> Produit <span class="red_text">Cool stuffs</span> 
+                    <br> par <span class="red_text"> Kelly Hampton </span> à 23h00  </span>
+                    <a href="#"> <span id="arrow_right"></span></a>
+                    <a href="#"> <span id="arrow_left"> </span></a> 
+                </div>
+            </div>
+
+            <div id="content_bloc_prod">	<!-- contenu du block_produit -->							
+                <div id="prod_price">
+                    <div id="prod_price_content">
+                        <span id="prod_price_content_text">
+                            <span class="grey">à partir de<br/>
+                            <b>149,99 €</b>
+                            </span>
+                        </span>
+                    </div>
+                    <div id="prod_price_arrow">
+                        <img src="images/prix_item_arrow.png" width="16" height="16" alt="#" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer_bloc_prod"> <!-- footer du block_prod -->
+                <span id="footer_title">Voir le produit</span>
+                <span id="arrow_footer_bloc_prod"></span> 
+            </div>
+        </div>
+
+<!--------------------------- bloc voir la collection ---------------------------->
+
+	<div id="global_content_collection">
+	    <br/>
+	    <div class="content">
+	        <div class="headeritem"> 
+	            <span class="text"> Collection <span class="red_text">Cool stuffs</span> <br> par <span class="red_text"> Kelly Hampton </span> à 23h00  </span>
+	            <a href="#"> <span class="arrow_right"></span></a>
+	            <a href="#"> <span class="arrow_left"> </span></a>
+	        </div>
+	    </div>
+	    <div class="content_item">								
+	        <div id="picture1">
+	            
+	        </div>
+	        <div id="picture2">
+	            
+	        </div>
+	        <div id="picture3">
+	            
+	        </div>
+	    </div>
+	    <div class="see_product">
+	        <span class="see_product_title">Voir la collection</span> <!-- titre de la fenètre -->
+	        <span class="arrow_see_product"></span> <!-- image flèche à droite -->
+	    </div>
+	</div>
+</body>
+</html>

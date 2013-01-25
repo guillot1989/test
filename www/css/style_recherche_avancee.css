@@ -1,0 +1,61 @@
+/***
+*************************************************************************
+@copyright : AgencyBlur / QL_appshop
+@date : 23/01/2013
+@Description :
+style de la page "Recherche Avancée" 
+*************************************************************************
+***/
+
+
+/* 
+Mise en place du conteneur
+*/
+#avanced_search_container{
+    width: 320px;
+    margin: auto;
+}
+/* 
+Propriété de la classe
+*/
+.avanced_search_type
+{
+    background-color: #3d3c3c;
+    border-bottom: 1px solid #515151;
+    display: block;
+
+}
+/* 
+Propriété des liens de la classe
+*/
+.avanced_search_type a
+{
+    color: #edebe8;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    line-height: 45px;
+    padding-left: 60px;
+    background: url(../images/picto_puce_close.jpg) left no-repeat; 
+}
+
+#start_search_type
+{
+    display: block;
+   "assets/www/css/style_recherche_avancee.css"
+}
+
+/* 
+Mise en page des Liens
+*/
+#start_search_type a
+{
+    color: #edebe8;
+    text-decoration: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+}
+
