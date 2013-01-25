@@ -179,22 +179,24 @@ function deleteCollection(id_utilisateur, id_collection) {
  * Retour : attribut name d'Objets Collection (flux xml)
  * Nb : NON FONCTIONNEL et NON TESTEE car pas de gestion des user_id pour l'instant
 **/
-function showCollections(id_utilisateur) {
+function showCollections(id_utilisateur, name_utilisateur) {
 	$.ajax({
 		type: "GET",
-		url: "http://lyon4.steven-titren.com/collections?user_id=1",
+		url: "http://api.jolielist.com/collections?user_id=1",
 		dataType: "xml",
 		complete : function(data, status) {
 			var produit = data.responseXML;
 			var ajoutHtml = "";
 			$(produit).find('collection').each(function(){
 				var collection_id = $(this).find('collection_id').text();
+				//alert(collection_id);
 				var nom = $(this).find('name').text();
 				var type = $(this).find('collection_type_id').text();
+				
 				if (type == 1){
-					ajoutHtml += "<li><a href='collection-dynamic.html?user_id="+id_utilisateur+"&id_collection="+collection_id+"&name_collection="+nom+"'>"+nom+"</a></li>";
+					ajoutHtml += "<li><a href='collection-dynamic.html?user_id="+id_utilisateur+"&user_name="+name_utilisateur+"&id_collection="+collection_id+"&name_collection="+nom+"'>"+nom+"</a></li>";
 				}else{
-					ajoutHtml += "<li class='public_collection'><a href='collection-dynamic.html?user_id="+id_utilisateur+"&id_collection="+collection_id+"&name_collection="+nom+"'>"+nom+"</a></li>";
+					ajoutHtml += "<li class='public_collection'><a href='collection-dynamic.html?user_id="+id_utilisateur+"&user_name="+name_utilisateur+"&id_collection="+collection_id+"&name_collection="+nom+"'>"+nom+"</a></li>";
 				}
 			});
 			$(".navigation").append(ajoutHtml);

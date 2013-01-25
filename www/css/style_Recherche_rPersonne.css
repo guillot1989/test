@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* ---------------------------------------------------------------------------------- 
+@copyright : AgencyBlur / QL_appshop 
+@date : 25/01/2013 
+@Description : Feuille de style de la page Recherche_personne.html
+----------------------------------------------------------------------------------------------------- */
+body{
+	 height:480px;
+	 widht:320px;
+ }
+ 
+ 
+/*en tête*/
+	 
+ .image_header{
+	position:absolute;
+	z-index:2;
+ }
+/*fond*/ 
+ .image-background{
+	 position:absolute;
+	 z-index:1;
+	 }
+ #under-body{
+	position:absolute;
+	height:153px;
+	width:320px;
+	top: 50px;
+	z-index:3;
+	
+}
+ 
+ /*fond Bouton*/
+#background_button{
+	position:absolute;
+	height:120px;
+	width:320px;
+	top: 146px;
+	z-index:3;
+}
+
+/*bouton désabonner*/
+.button_desabonner{
+	position:absolute;
+	width: 320px;
+	height:39px;
+	background-image:url(../images/buttonRed.jpg);
+	cursor:pointer;
+	top: 1px;
+	}
+
+/*bouton suivre*/
+.button_suivre{
+	position:absolute;
+	top: 40px;
+	width: 320px;
+	height:39px;
+	background-image:url(../images/buttonRed.jpg);
+	cursor:pointer;
+	
+	}
+
+/*bouton bloquer*/
+.button_bloquer{
+	position:absolute;
+	top: 79px;
+	width: 320px;
+	height:39px;
+	background-image:url(../images/buttonRed.jpg);
+	cursor:pointer;
+	}	
+
+
+
+
+
+/*div Fleche vers le bas*/
+#button_arrow	{
+	width:45px;
+	height:45px;
+	position:absolute;
+	background-image:url(../images/arrowdown.jpg);
+	z-index:4;
+	left: 283px;
+	top: 99px;
+
+	
+	
+}
+/*class fleche vers le bas*/
+.button_arrow{
+	width:45px;
+	height:48px;
+	background-image:url(../images/arrowdown.jpg);
+	cursor:pointer;
+}
+
+	
+/*liste*/	
+.li{
+	list-style:none;
+	display:block;	
+	margin-left:-40px;
+	padding-left:0px;
+	margin-top:0px;
+
+}
+
+
+/*div du bouton Fleche horizontal*/
+#horizontal_arrow	{
+	width:42px;
+	height:45px;
+	position:absolute;
+	background-image:url(../images/horizontal_arrow.jpg);
+	z-index:5;
+	left: 286px;
+	top: 50px;
+
+	
+	
+}
+/*class du bouton fleche horizontal*/
+.horizontal_arrow{
+	width:42px;
+	height:48px;
+	background-image:url(../images/horizontal_arrow.jpg);
+	cursor:pointer;
+}
