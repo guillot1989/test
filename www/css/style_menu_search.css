@@ -13,7 +13,7 @@ html
 
 body 
 {
-	width: 320px;
+	width: 260px;
 	font-size: 0.85em;
 	margin: 0px;
 	/*background-color:#ededed;
@@ -46,10 +46,11 @@ body
 #contentsearchnav
 	/*conteneur qui regroupe les div design_search_haut et design_search_bas*/
 	{
-	margin: auto;
-	width: 320px;
+	/*margin: auto;*/
+	width: 260px;
 	height: 44px;
 	position:relative;
+	left:-260px;
 }
 
 #design_search_haut /*Cette div permet de mettre en place le d√©grad√©*/
@@ -69,14 +70,14 @@ body
 	/* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#b81113',
 		endColorstr='#da3739', GradientType=0 ); /* IE6-9 */
-	width: 320px;
+	width: 260px;
 	height: 22px;
 }
 
 #design_search_bas
-	/*Cette div permet de mettre une couleur sans dÈgradÈ*/ {
+	/*Cette div permet de mettre une couleur sans d√©grad√©*/ {
 	background-color: #b71012;
-	width: 320px;
+	width: 260px;
 	height: 22px;
 }
 
@@ -110,7 +111,7 @@ body
 	width: 208px;
 	height: 30px;
 	border-radius: 20px;
-	margin-top: 3px;
+	margin-top: 7px;
 	margin-left: 10px;
 	padding-right : 30px;
 }
@@ -122,9 +123,7 @@ body
 	position: absolute;
 	top: 13px;
 	margin-left: 20px;
-	background : url(../images/icosearch_03.png) no-repeat;
-	width: 23px;
-	height: 18px;
+	background : url(./images/icosearch_03.png);
 }
 
 #icon_clear
@@ -135,9 +134,7 @@ qui doit apparaitre lorsque du texte est tapÈ dans l'input search_nav*/
 	top: 14px;
 	margin-left: 190px;
 	display:none;
-	background: url(../images/ico_clear.png) no-repeat;
-	width: 16px;
-	height: 16px;
+	background: url(./images/ico_clear.png);
 }
 
 #contentResult
